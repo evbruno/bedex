@@ -1,0 +1,14 @@
+.classpath
+.project
+.cache
+.settings/
+
+.idea
+.idea_modules
+*.iml
+*.iws
+
+.DS_Store
+
+# ignore local production file
+db.properties
