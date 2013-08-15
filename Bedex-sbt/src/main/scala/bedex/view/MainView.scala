@@ -23,6 +23,7 @@ import scalafx.scene.control.cell._
 import scalafx.scene.control._
 import scalafx.util.StringConverter
 import scalafx.util.converter.DefaultStringConverter
+import scalafx.collections.ObservableBuffer
 
 //FIXME 
 // + provide some root Node (extension or wrapping)
@@ -49,25 +50,35 @@ class MainView {
   val usersCombo = new ComboBox(controller.users) {
     prefWidth = COMBO_WIDTH
     converter = new DisplayableObjectReadonlyConverter
+    selectionModel.value.selectFirst()
   }
 
   val filterCombo = new ComboBox(controller.filterOptions) {
     prefWidth = COMBO_WIDTH
-    selectionModel.value.select(controller.filterOptions(0))
+    selectionModel.value.selectFirst()
+  }
+  
+  val levelCombo = new ComboBox[Option[Int]] {
+    items = ObservableBuffer(Seq(None, Some(0), Some(1), Some(2), Some(3)))
+    converter = new SomeConverter("Lvl: ")
+    selectionModel.value.selectFirst()
   }
 
   def onSearchAction = {
     val team = teamsCombo.value.value
     val user = usersCombo.value.value
     val filter = filterCombo.value.value
+    val level = levelCombo.value.value
 
-    logger.debug("Searchin for team = {} and user = {} filter = {}", team, user, filter)
+    logger.debug("Searchin for team = {}, user = {}, filter = {}, level = {}", team, user, filter, level)
 
-    table.items = filter match {
+    /*table.items = filter match {
       case FilterWithReason => controller.missApointments(team, user).filterNot(_.reason.value.isEmpty)
       case FilterWithoutReason => controller.missApointments(team, user).filter(_.reason.value.isEmpty)
       case _ => controller.missApointments(team, user)
-    }
+    }*/
+    
+    table.items = controller.missApointments(team, user, level)
   }
 
   val searchButton = new Button {
@@ -187,12 +198,13 @@ class MainView {
       //gridLinesVisible = true
     }
 
-    grid.add(justLabel, 0, 0, 4, 1)
+    grid.add(justLabel, 0, 0, 5, 1)
 
     grid.add(teamsCombo, 0, 1)
     grid.add(usersCombo, 1, 1)
-    grid.add(filterCombo, 2, 1)
-    grid.add(searchButton, 3, 1)
+    //grid.add(filterCombo, 2, 1)
+    grid.add(levelCombo, 2, 1)
+    grid.add(searchButton, 4, 1)
 
     grid.add(table, 0, 2, 5, 20)
 

@@ -40,9 +40,7 @@ class Controller {
     if (team == NoTeam) users
     else ObservableBuffer((NoUser +: Users.findBy(team)) toSeq)
 
-  //def missApointments = MissAppointments all
-
-  def missApointments(team: Team, user: User): ObservableBuffer[MissAppointment] =
+  private def missApointments(team: Team, user: User): ObservableBuffer[MissAppointment] =
     if (user != null && user != NoUser) {
       logger.debug("Searching for user {}", user)
       MissAppointments findBy user
@@ -53,6 +51,19 @@ class Controller {
       logger.debug("Showing everybody")
       MissAppointments all
     }
+
+  def missApointments(team: Team, user: User, level: Option[Int]): ObservableBuffer[MissAppointment] = {
+    val logs = missApointments(team, user)
+
+    import bedex.biz.Domain._
+    
+    logger.debug("Filter logs#size = {} with level = {}", logs.size, level)
+
+    level match {
+      case None => logs
+      case Some(lvl) => logs.filter(_.levelLog == lvl).sorted
+    }
+  }
 
   private lazy val dirty = ObservableBuffer(ArrayBuffer[MissAppointment]())
 
