@@ -6,15 +6,13 @@ mainClass in assembly := Some("bedex.BedexApp")
 
 name := "bedex"
 
-version := "0.1"
+version := "0.2-SNAPSHOT"
 
 scalaVersion := "2.10.2"
 
 libraryDependencies += "org.scalafx" %% "scalafx" % "1.0.0-M4"
 
 libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.5"     
-
-libraryDependencies += "com.h2database" % "h2" % "1.3.173"
 
 // local resources (used for production only)
 
@@ -27,6 +25,8 @@ libraryDependencies += "oracle" % "ojdbc5" % "11.2.0.2.0"
 libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0.M6-SNAP36" % "test"
             
 libraryDependencies += "org.mockito" % "mockito-all" % "1.9.5" % "test"
+
+libraryDependencies += "com.h2database" % "h2" % "1.3.173"
             
 // JavaFX            
 
