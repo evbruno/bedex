@@ -35,7 +35,7 @@ object OracleRepository extends Repository {
     				u.team t_name, 
     				t.coach t_coach,
     				t.manager t_manager
-				FROM LOGMISSAPPOINTMENT_SPIKES m, USER_TEAM  u, TEAM t
+				FROM LOGMISSAPPOINTMENT m, USER_TEAM  u, TEAM t
 				WHERE u.team = t.name 
     				AND m.user_name = u.user_name 
     				AND m.start_date > (SYSDATE - 14) 
@@ -45,7 +45,7 @@ object OracleRepository extends Repository {
   }
 
   override def update(miss: MissAppointment): Unit = {
-    val sql = """UPDATE LOGMISSAPPOINTMENT_SPIKES l
+    val sql = """UPDATE LOGMISSAPPOINTMENT l
 			SET l.reason = ?
 			WHERE 
 			  l.type_log = ?

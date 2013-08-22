@@ -1,429 +1,429 @@
 USER_NAME|LEVEL_LOG|TYPE_LOG|WORKED|START_DATE|END_DATE|TEAM|MSGTIME|REASON
-andy.rodrigues|1|LOW|0|25-JUL-13|26-JUL-13|Alpha|26-JUL-13|
-andy.rodrigues|1|LOW|0|24-JUL-13|25-JUL-13|Alpha|25-JUL-13|
-andy.rodrigues|1|LOW|0|17-JUL-13|18-JUL-13|Alpha|18-JUL-13|
-andy.rodrigues|1|LOW|6.4|03-JUL-13|04-JUL-13|Alpha|04-JUL-13|
-andy.rodrigues|1|LOW|0|02-JUL-13|03-JUL-13|Alpha|03-JUL-13|
-andy.rodrigues|1|LOW|0|01-JUL-13|02-JUL-13|Alpha|02-JUL-13|
-andy.rodrigues|1|LOW|0|28-JUN-13|01-JUL-13|Alpha|01-JUL-13|
-andy.rodrigues|1|LOW|0|27-JUN-13|28-JUN-13|Alpha|28-JUN-13|
-andy.rodrigues|1|LOW|0|26-JUN-13|27-JUN-13|Alpha|27-JUN-13|
-andy.rodrigues|1|LOW|0|25-JUN-13|26-JUN-13|Alpha|26-JUN-13|
-baron.henry|1|LOW|2.5|25-JUL-13|26-JUL-13|Alpha|26-JUL-13|
-baron.henry|1|LOW|0|17-JUL-13|18-JUL-13|Alpha|18-JUL-13|
-baron.henry|1|LOW|4|09-JUL-13|10-JUL-13|Alpha|10-JUL-13|
-baron.henry|1|LOW|0|08-JUL-13|09-JUL-13|Alpha|09-JUL-13|
-baron.henry|1|LOW|3.9|03-JUL-13|04-JUL-13|Alpha|04-JUL-13|
-baron.henry|1|LOW|0|02-JUL-13|03-JUL-13|Alpha|03-JUL-13|
-baron.henry|1|LOW|3|01-JUL-13|02-JUL-13|Alpha|02-JUL-13|
-baron.henry|1|LOW|0|28-JUN-13|01-JUL-13|Alpha|01-JUL-13|
-baron.henry|1|LOW|0|27-JUN-13|28-JUN-13|Alpha|28-JUN-13|
-baron.henry|1|LOW|0|26-JUN-13|27-JUN-13|Alpha|27-JUN-13|
-baron.henry|1|LOW|5.5|14-JUN-13|17-JUN-13|Alpha|17-JUN-13|
-dilbert.panda|1|LOW|0|25-JUL-13|26-JUL-13|Beta|26-JUL-13|
-dilbert.panda|1|LOW|0|23-JUL-13|24-JUL-13|Beta|24-JUL-13|
-dilbert.panda|1|LOW|0|17-JUL-13|18-JUL-13|Beta|18-JUL-13|
-dilbert.panda|1|LOW|0|16-JUL-13|17-JUL-13|Beta|17-JUL-13|
-dilbert.panda|1|LOW|0|15-JUL-13|16-JUL-13|Beta|16-JUL-13|
-dilbert.panda|1|LOW|0|13-JUN-13|14-JUN-13|Beta|14-JUN-13|
-eddie.noble|1|LOW|6|26-JUL-13|29-JUL-13|Alpha|29-JUL-13|
-eddie.noble|1|LOW|6.4|26-JUN-13|27-JUN-13|Alpha|27-JUN-13|
-eddie.noble|1|LOW|6.4|19-JUN-13|20-JUN-13|Alpha|20-JUN-13|
-edy.gui|1|LOW|6.3|26-JUL-13|29-JUL-13|Alpha|29-JUL-13|
-edy.gui|1|LOW|6|23-JUL-13|24-JUL-13|Alpha|24-JUL-13|
-edy.gui|1|LOW|0|22-JUL-13|23-JUL-13|Alpha|23-JUL-13|
-edy.gui|1|LOW|5.7|08-JUL-13|09-JUL-13|Alpha|09-JUL-13|Dentist Appointment
-edy.gui|1|LOW|2.6|03-JUL-13|04-JUL-13|Alpha|04-JUL-13|
-edy.gui|1|LOW|0|13-JUN-13|14-JUN-13|Alpha|14-JUN-13|
-ewald.crat|1|LOW|0|26-JUL-13|29-JUL-13|Development|29-JUL-13|
-ewald.crat|1|LOW|0|25-JUL-13|26-JUL-13|Development|26-JUL-13|
-ewald.crat|1|LOW|5|23-JUL-13|24-JUL-13|Development|24-JUL-13|Doctors Appointment
-ewald.crat|1|LOW|0|22-JUL-13|23-JUL-13|Development|23-JUL-13|
-ewald.crat|1|LOW|0|18-JUL-13|19-JUL-13|Development|19-JUL-13|
-ewald.crat|1|LOW|0|17-JUL-13|18-JUL-13|Development|18-JUL-13|
-ewald.crat|1|LOW|0|16-JUL-13|17-JUL-13|Development|17-JUL-13|
-ewald.crat|1|LOW|0|15-JUL-13|16-JUL-13|Development|16-JUL-13|
-ewald.crat|1|LOW|0|12-JUL-13|15-JUL-13|Development|15-JUL-13|
-ewald.crat|1|LOW|0|11-JUL-13|12-JUL-13|Development|12-JUL-13|
-ewald.crat|1|LOW|0|10-JUL-13|11-JUL-13|Development|11-JUL-13|
-ewald.crat|1|LOW|0|09-JUL-13|10-JUL-13|Development|10-JUL-13|
-ewald.crat|1|LOW|0|08-JUL-13|09-JUL-13|Development|09-JUL-13|
-ewald.crat|1|LOW|0|03-JUL-13|04-JUL-13|Development|04-JUL-13|
-ewald.crat|1|LOW|0|02-JUL-13|03-JUL-13|Development|03-JUL-13|
-ewald.crat|1|LOW|0|01-JUL-13|02-JUL-13|Development|02-JUL-13|
-ewald.crat|1|LOW|0|28-JUN-13|01-JUL-13|Development|01-JUL-13|
-ewald.crat|1|LOW|6.4|27-JUN-13|28-JUN-13|Development|28-JUN-13|
-ewald.crat|1|LOW|0|26-JUN-13|27-JUN-13|Development|27-JUN-13|
-ewald.crat|1|LOW|0|25-JUN-13|26-JUN-13|Development|26-JUN-13|
-ewald.crat|1|LOW|0|24-JUN-13|25-JUN-13|Development|25-JUN-13|
-ewald.crat|1|LOW|0|20-JUN-13|21-JUN-13|Development|21-JUN-13|
-ewald.crat|1|LOW|0|19-JUN-13|20-JUN-13|Development|20-JUN-13|
-ewald.crat|1|LOW|0|18-JUN-13|19-JUN-13|Development|19-JUN-13|
-ewald.crat|1|LOW|0|14-JUN-13|17-JUN-13|Development|17-JUN-13|
-ewald.crat|1|LOW|0|13-JUN-13|14-JUN-13|Development|14-JUN-13|
-filipa.karols|1|LOW|4.6|19-JUL-13|22-JUL-13|Beta|22-JUL-13|Her hubby was sick
-filipa.karols|1|LOW|0|18-JUL-13|19-JUL-13|Beta|19-JUL-13|
-filipa.karols|1|LOW|5.9|09-JUL-13|10-JUL-13|Beta|10-JUL-13|
-filipa.karols|1|LOW|6.1|05-JUL-13|08-JUL-13|Beta|08-JUL-13|
-filipa.karols|1|LOW|6.2|04-JUL-13|05-JUL-13|Beta|05-JUL-13|English class
-filipa.karols|1|LOW|6.4|26-JUN-13|27-JUN-13|Beta|27-JUN-13|
-filipa.karols|1|LOW|0|25-JUN-13|26-JUN-13|Beta|26-JUN-13|
-filipa.karols|1|LOW|3.9|24-JUN-13|25-JUN-13|Beta|25-JUN-13|
-filipa.karols|1|LOW|5.7|20-JUN-13|21-JUN-13|Beta|21-JUN-13|
-filipa.karols|1|LOW|2.4|14-JUN-13|17-JUN-13|Beta|17-JUN-13|Took a break
-filipa.karols|1|LOW|5.6|13-JUN-13|14-JUN-13|Beta|14-JUN-13|Idle
-filipo.jack|1|LOW|0|19-JUL-13|22-JUL-13|Beta|22-JUL-13|
-filipo.jack|1|LOW|0|19-JUL-13|22-JUL-13|Development|22-JUL-13|
-filipo.jack|1|LOW|0|16-JUL-13|17-JUL-13|Beta|17-JUL-13|
-filipo.jack|1|LOW|0|16-JUL-13|17-JUL-13|Development|17-JUL-13|
-filipo.jack|1|LOW|4.7|11-JUL-13|12-JUL-13|Beta|12-JUL-13|
-filipo.jack|1|LOW|4.7|11-JUL-13|12-JUL-13|Development|12-JUL-13|
-filipoh.yok|1|LOW|0|26-JUL-13|29-JUL-13|Development|29-JUL-13|
-filipoh.yok|1|LOW|0|16-JUL-13|17-JUL-13|Development|17-JUL-13|
-filipoh.yok|1|LOW|0|15-JUL-13|16-JUL-13|Development|16-JUL-13|
-filipoh.yok|1|LOW|0|12-JUL-13|15-JUL-13|Development|15-JUL-13|
-filipoh.yok|1|LOW|0|10-JUL-13|11-JUL-13|Development|11-JUL-13|
-filipoh.yok|1|LOW|0|04-JUL-13|05-JUL-13|Development|05-JUL-13|
-filipoh.yok|1|LOW|5.5|03-JUL-13|04-JUL-13|Development|04-JUL-13|Doctors Appointment
-filipoh.yok|1|LOW|2.5|13-JUN-13|14-JUN-13|Development|14-JUN-13|
-gabby.eps|1|LOW|0|23-JUL-13|24-JUL-13|Alpha|24-JUL-13|
-gabby.eps|1|LOW|0|23-JUL-13|24-JUL-13|Beta|24-JUL-13|
-gabby.eps|1|LOW|4.6|22-JUL-13|23-JUL-13|Beta|23-JUL-13|
-gabby.eps|1|LOW|4.6|22-JUL-13|23-JUL-13|Alpha|23-JUL-13|
-gabby.eps|1|LOW|0|19-JUL-13|22-JUL-13|Beta|22-JUL-13|
-gabby.eps|1|LOW|0|19-JUL-13|22-JUL-13|Alpha|22-JUL-13|
-gabby.eps|1|LOW|0|11-JUL-13|12-JUL-13|Beta|12-JUL-13|
-gabby.eps|1|LOW|0|11-JUL-13|12-JUL-13|Alpha|12-JUL-13|
-gabby.eps|1|LOW|6.2|09-JUL-13|10-JUL-13|Alpha|10-JUL-13|
-gabby.eps|1|LOW|6.2|09-JUL-13|10-JUL-13|Beta|10-JUL-13|
-gabby.eps|1|LOW|0|24-JUN-13|25-JUN-13|Beta|25-JUN-13|
-gabby.eps|1|LOW|0|24-JUN-13|25-JUN-13|Alpha|25-JUN-13|
-gabby.eps|1|LOW|5.9|18-JUN-13|19-JUN-13|Beta|19-JUN-13|Doctors Appointment
-gabby.eps|1|LOW|5.9|18-JUN-13|19-JUN-13|Alpha|19-JUN-13|Doctors Appointment
-gap.shivas|1|LOW|0|25-JUL-13|26-JUL-13|Development|26-JUL-13|
-gap.shivas|1|LOW|0|24-JUL-13|25-JUL-13|Development|25-JUL-13|
-gap.shivas|1|LOW|0|19-JUL-13|22-JUL-13|Development|22-JUL-13|vacation woohooo
-gap.shivas|1|LOW|0|08-JUL-13|09-JUL-13|Development|09-JUL-13|Vacations
-gap.shivas|1|LOW|0|27-JUN-13|28-JUN-13|Development|28-JUN-13|
-gap.shivas|1|LOW|0|20-JUN-13|21-JUN-13|Development|21-JUN-13|
-gap.shivas|1|LOW|0|19-JUN-13|20-JUN-13|Development|20-JUN-13|
-gap.shivas|1|LOW|5|18-JUN-13|19-JUN-13|Development|19-JUN-13|
-gap.shivas|1|LOW|0|13-JUN-13|14-JUN-13|Development|14-JUN-13|
-gerald.krato|1|LOW|0|26-JUL-13|29-JUL-13|Alpha|29-JUL-13|
-gerald.krato|1|LOW|0|25-JUL-13|26-JUL-13|Alpha|26-JUL-13|
-gerald.krato|1|LOW|0|24-JUL-13|25-JUL-13|Alpha|25-JUL-13|
-gerald.krato|1|LOW|0|23-JUL-13|24-JUL-13|Alpha|24-JUL-13|
-gerald.krato|1|LOW|0|22-JUL-13|23-JUL-13|Alpha|23-JUL-13|
-gerald.krato|1|LOW|0|19-JUL-13|22-JUL-13|Alpha|22-JUL-13|
-gerald.krato|1|LOW|0|17-JUL-13|18-JUL-13|Alpha|18-JUL-13|
-gerald.krato|1|LOW|0|16-JUL-13|17-JUL-13|Alpha|17-JUL-13|
-gerald.krato|1|LOW|0|15-JUL-13|16-JUL-13|Alpha|16-JUL-13|
-gerald.krato|1|LOW|0|12-JUL-13|15-JUL-13|Alpha|15-JUL-13|
-gerald.krato|1|LOW|0|11-JUL-13|12-JUL-13|Alpha|12-JUL-13|
-gerald.krato|1|LOW|0|10-JUL-13|11-JUL-13|Alpha|11-JUL-13|
-gerald.krato|1|LOW|0|09-JUL-13|10-JUL-13|Alpha|10-JUL-13|
-gerald.krato|1|LOW|0|08-JUL-13|09-JUL-13|Alpha|09-JUL-13|
-gerald.krato|1|LOW|0|05-JUL-13|08-JUL-13|Alpha|08-JUL-13|
-gerald.krato|1|LOW|0|04-JUL-13|05-JUL-13|Alpha|05-JUL-13|
-gerald.krato|1|LOW|0|03-JUL-13|04-JUL-13|Alpha|04-JUL-13|
-gerald.krato|1|LOW|0|02-JUL-13|03-JUL-13|Alpha|03-JUL-13|
-gerald.krato|1|LOW|0|01-JUL-13|02-JUL-13|Alpha|02-JUL-13|
-gerald.krato|1|LOW|0|28-JUN-13|01-JUL-13|Alpha|01-JUL-13|
-gerald.krato|1|LOW|0|24-JUN-13|25-JUN-13|Alpha|25-JUN-13|
-gerald.krato|1|LOW|0|20-JUN-13|21-JUN-13|Alpha|21-JUN-13|he was on medical leave
-gerald.krato|1|LOW|0|19-JUN-13|20-JUN-13|Alpha|20-JUN-13|he was on medical leave
-gerald.krato|1|LOW|0|18-JUN-13|19-JUN-13|Alpha|19-JUN-13|he was on medical leave
-gerald.krato|1|LOW|0|14-JUN-13|17-JUN-13|Alpha|17-JUN-13|
-gerald.krato|1|LOW|0|13-JUN-13|14-JUN-13|Alpha|14-JUN-13|
-gui.andel|1|LOW|0|24-JUL-13|25-JUL-13|ESP_MGA|25-JUL-13|
-gui.andel|1|LOW|0|24-JUL-13|25-JUL-13|Beta|25-JUL-13|
-gui.andel|1|LOW|0|22-JUL-13|23-JUL-13|ESP_MGA|23-JUL-13|
-gui.andel|1|LOW|0|22-JUL-13|23-JUL-13|Beta|23-JUL-13|
-gui.andel|1|LOW|0|18-JUL-13|19-JUL-13|Beta|19-JUL-13|
-gui.andel|1|LOW|0|18-JUL-13|19-JUL-13|ESP_MGA|19-JUL-13|
-gui.andel|1|LOW|0|16-JUL-13|17-JUL-13|ESP_MGA|17-JUL-13|
-gui.andel|1|LOW|0|16-JUL-13|17-JUL-13|Beta|17-JUL-13|
-gui.andel|1|LOW|0|11-JUL-13|12-JUL-13|Beta|12-JUL-13|
-gui.andel|1|LOW|0|11-JUL-13|12-JUL-13|ESP_MGA|12-JUL-13|
-gui.andel|1|LOW|0|10-JUL-13|11-JUL-13|ESP_MGA|11-JUL-13|
-gui.andel|1|LOW|0|10-JUL-13|11-JUL-13|Beta|11-JUL-13|
-gui.andel|1|LOW|0|09-JUL-13|10-JUL-13|Beta|10-JUL-13|
-gui.andel|1|LOW|0|09-JUL-13|10-JUL-13|ESP_MGA|10-JUL-13|
-gui.andel|1|LOW|0|05-JUL-13|08-JUL-13|Beta|08-JUL-13|
-gui.andel|1|LOW|0|05-JUL-13|08-JUL-13|ESP_MGA|08-JUL-13|
-gui.andel|1|LOW|0|03-JUL-13|04-JUL-13|ESP_MGA|04-JUL-13|
-gui.andel|1|LOW|0|03-JUL-13|04-JUL-13|Beta|04-JUL-13|
-gui.andel|1|LOW|0|02-JUL-13|03-JUL-13|ESP_MGA|03-JUL-13|
-gui.andel|1|LOW|0|02-JUL-13|03-JUL-13|Beta|03-JUL-13|
-gui.andel|1|LOW|0|28-JUN-13|01-JUL-13|ESP_MGA|01-JUL-13|
-gui.andel|1|LOW|0|28-JUN-13|01-JUL-13|Beta|01-JUL-13|
-gui.andel|1|LOW|0|27-JUN-13|28-JUN-13|Beta|28-JUN-13|
-gui.andel|1|LOW|0|27-JUN-13|28-JUN-13|ESP_MGA|28-JUN-13|
-gui.andel|1|LOW|0|26-JUN-13|27-JUN-13|ESP_MGA|27-JUN-13|
-gui.andel|1|LOW|0|26-JUN-13|27-JUN-13|Beta|27-JUN-13|
-gui.andel|1|LOW|0|24-JUN-13|25-JUN-13|Beta|25-JUN-13|
-gui.andel|1|LOW|0|24-JUN-13|25-JUN-13|ESP_MGA|25-JUN-13|
-gui.ironside|1|LOW|0|26-JUL-13|29-JUL-13|Development|29-JUL-13|
-gui.easter|1|LOW|3.5|24-JUN-13|25-JUN-13|Development|25-JUN-13|iddle
-gui.easter|1|LOW|0|13-JUN-13|14-JUN-13|Development|14-JUN-13|
-hermez.reggie|1|LOW|4.6|24-JUL-13|25-JUL-13|Development|25-JUL-13|Doctors Appointment
-hermez.reggie|1|LOW|0|18-JUL-13|19-JUL-13|Development|19-JUL-13|
-hermez.reggie|1|LOW|0|11-JUL-13|12-JUL-13|Development|12-JUL-13|
-hermez.reggie|1|LOW|6.3|05-JUL-13|08-JUL-13|Development|08-JUL-13|
-hermez.reggie|1|LOW|6.1|02-JUL-13|03-JUL-13|Development|03-JUL-13|
-jeorge.kron|1|LOW|4.7|22-JUL-13|23-JUL-13|Alpha|23-JUL-13|Doctors Appointment
-jeorge.kron|1|LOW|4.7|22-JUL-13|23-JUL-13|Development|23-JUL-13|Doctors Appointment
-jeorge.kron|1|LOW|4.7|22-JUL-13|23-JUL-13|Beta|23-JUL-13|Doctors Appointment
-jhorel.singer|1|LOW|6.4|23-JUL-13|24-JUL-13|Beta|24-JUL-13|
-jhorel.singer|1|LOW|5.1|22-JUL-13|23-JUL-13|Beta|23-JUL-13|Doctors Appointment
-jhorel.singer|1|LOW|0|17-JUL-13|18-JUL-13|Beta|18-JUL-13|
-jhorel.singer|1|LOW|5.9|09-JUL-13|10-JUL-13|Beta|10-JUL-13|
-jhorel.singer|1|LOW|0|27-JUN-13|28-JUN-13|Beta|28-JUN-13|Doc
-jhorel.singer|1|LOW|4.3|24-JUN-13|25-JUN-13|Beta|25-JUN-13|
-jhorel.singer|1|LOW|5.7|18-JUN-13|19-JUN-13|Beta|19-JUN-13|Wife as sick
-jhorel.singer|1|LOW|5.4|13-JUN-13|14-JUN-13|Beta|14-JUN-13|Idle
-jorgie.son|1|LOW|0|26-JUL-13|29-JUL-13|Development|29-JUL-13|
-jorgie.son|1|LOW|0|24-JUL-13|25-JUL-13|Development|25-JUL-13|
-jorgie.son|1|LOW|0|23-JUL-13|24-JUL-13|Development|24-JUL-13|
-jorgie.son|1|LOW|0|18-JUL-13|19-JUL-13|Development|19-JUL-13|
-jorgie.son|1|LOW|0|16-JUL-13|17-JUL-13|Development|17-JUL-13|
-jorgie.son|1|LOW|0|15-JUL-13|16-JUL-13|Development|16-JUL-13|
-jorgie.son|1|LOW|0|11-JUL-13|12-JUL-13|Development|12-JUL-13|
-jorgie.son|1|LOW|0|10-JUL-13|11-JUL-13|Development|11-JUL-13|
-jorgie.son|1|LOW|0|08-JUL-13|09-JUL-13|Development|09-JUL-13|
-jorgie.son|1|LOW|0|05-JUL-13|08-JUL-13|Development|08-JUL-13|
-jorgie.son|1|LOW|0|03-JUL-13|04-JUL-13|Development|04-JUL-13|
-jorgie.son|1|LOW|0|28-JUN-13|01-JUL-13|Development|01-JUL-13|
-jorgie.son|1|LOW|0|27-JUN-13|28-JUN-13|Development|28-JUN-13|
-jorgie.son|1|LOW|0|26-JUN-13|27-JUN-13|Development|27-JUN-13|
-jorgie.son|1|LOW|0|25-JUN-13|26-JUN-13|Development|26-JUN-13|
-jorgie.son|1|LOW|0|20-JUN-13|21-JUN-13|Development|21-JUN-13|
-jorgie.son|1|LOW|0|19-JUN-13|20-JUN-13|Development|20-JUN-13|
-jorgie.son|1|LOW|0|18-JUN-13|19-JUN-13|Development|19-JUN-13|
-jorgie.son|1|LOW|0|14-JUN-13|17-JUN-13|Development|17-JUN-13|
-louie.july|1|LOW|0|18-JUL-13|19-JUL-13|Development|19-JUL-13|
-louie.july|1|LOW|0|10-JUL-13|11-JUL-13|Development|11-JUL-13|
-louie.july|1|LOW|0|13-JUN-13|14-JUN-13|Development|14-JUN-13|
-louie.sea|1|LOW|5.1|26-JUL-13|29-JUL-13|Alpha|29-JUL-13|
-louie.sea|1|LOW|0|25-JUL-13|26-JUL-13|Alpha|26-JUL-13|
-louie.sea|1|LOW|1.3|12-JUL-13|15-JUL-13|Alpha|15-JUL-13|Medical leave/Idle
-louie.sea|1|LOW|5.3|05-JUL-13|08-JUL-13|Alpha|08-JUL-13|idle
-louie.sea|1|LOW|5.6|04-JUL-13|05-JUL-13|Alpha|05-JUL-13|
-louie.sea|1|LOW|6.3|27-JUN-13|28-JUN-13|Alpha|28-JUN-13|
-louie.paul|1|LOW|0|01-JUL-13|02-JUL-13|Alpha|02-JUL-13|Vacations
-louie.paul|1|LOW|0|20-JUN-13|21-JUN-13|Alpha|21-JUN-13|Lost one teeth
-louie.paul|1|LOW|0|19-JUN-13|20-JUN-13|Alpha|20-JUN-13|Medical stuff
-louie.paul|1|LOW|0|18-JUN-13|19-JUN-13|Alpha|19-JUN-13|Medical stuff
-louie.abroad|1|LOW|5.7|23-JUL-13|24-JUL-13|Alpha|24-JUL-13|
-louie.abroad|1|LOW|6.4|22-JUL-13|23-JUL-13|Alpha|23-JUL-13|
-louie.abroad|1|LOW|6.3|19-JUL-13|22-JUL-13|Alpha|22-JUL-13|
-louie.abroad|1|LOW|0|17-JUL-13|18-JUL-13|Alpha|18-JUL-13|
-louie.abroad|1|LOW|6.4|12-JUL-13|15-JUL-13|Alpha|15-JUL-13|
-louie.abroad|1|LOW|0|18-JUN-13|19-JUN-13|Alpha|19-JUN-13|Vacations
-louie.abroad|1|LOW|0|14-JUN-13|17-JUN-13|Alpha|17-JUN-13|Vacations
-louie.abroad|1|LOW|0|13-JUN-13|14-JUN-13|Alpha|14-JUN-13|Vacations
-mark.pumper|1|LOW|0|25-JUL-13|26-JUL-13|Development|26-JUL-13|
-mark.pumper|1|LOW|0|18-JUL-13|19-JUL-13|Development|19-JUL-13|
-mark.pumper|1|LOW|6|18-JUN-13|19-JUN-13|Development|19-JUN-13|
-mark.pumper|1|LOW|0|14-JUN-13|17-JUN-13|Development|17-JUN-13|
-mark.drinkez|1|LOW|0|10-JUL-13|11-JUL-13|Beta|11-JUL-13|
-mark.drinkez|1|LOW|0|09-JUL-13|10-JUL-13|Beta|10-JUL-13|
-mark.drinkez|1|LOW|0|08-JUL-13|09-JUL-13|Beta|09-JUL-13|
-mark.drinkez|1|LOW|0|28-JUN-13|01-JUL-13|Beta|01-JUL-13|
-mark.drinkez|1|LOW|0|25-JUN-13|26-JUN-13|Beta|26-JUN-13|No issue at the time
-mark.drinkez|1|LOW|0|24-JUN-13|25-JUN-13|Beta|25-JUN-13|No issue at the time
-mark.drinkez|1|LOW|0|18-JUN-13|19-JUN-13|Beta|19-JUN-13|
-mark.drinkez|1|LOW|3.9|13-JUN-13|14-JUN-13|Beta|14-JUN-13|
-mark.tzsu|1|LOW|0|08-JUL-13|09-JUL-13|Alpha|09-JUL-13|Vacations
-mark.tzsu|1|LOW|6.4|20-JUN-13|21-JUN-13|Alpha|21-JUN-13|
-markz.branch|1|LOW|5.6|24-JUN-13|25-JUN-13|Beta|25-JUN-13|
-markx.vinnie|1|LOW|0|23-JUL-13|24-JUL-13|Alpha|24-JUL-13|
-markx.vinnie|1|LOW|4.9|19-JUL-13|22-JUL-13|Alpha|22-JUL-13|
-markx.vinnie|1|LOW|0|25-JUN-13|26-JUN-13|Alpha|26-JUN-13|
-monk.brownie|1|LOW|0|25-JUL-13|26-JUL-13|Beta|26-JUL-13|
-monk.brownie|1|LOW|0|24-JUL-13|25-JUL-13|Beta|25-JUL-13|
-monk.brownie|1|LOW|0|23-JUL-13|24-JUL-13|Beta|24-JUL-13|
-monk.brownie|1|LOW|6.3|22-JUL-13|23-JUL-13|Beta|23-JUL-13|
-monk.brownie|1|LOW|6.1|19-JUL-13|22-JUL-13|Beta|22-JUL-13|
-monk.brownie|1|LOW|0|18-JUL-13|19-JUL-13|Beta|19-JUL-13|
-monk.brownie|1|LOW|0|17-JUL-13|18-JUL-13|Beta|18-JUL-13|
-monk.brownie|1|LOW|0|15-JUL-13|16-JUL-13|Beta|16-JUL-13|
-monk.brownie|1|LOW|0|12-JUL-13|15-JUL-13|Beta|15-JUL-13|
-monk.brownie|1|LOW|0|10-JUL-13|11-JUL-13|Beta|11-JUL-13|
-monk.brownie|1|LOW|0|09-JUL-13|10-JUL-13|Beta|10-JUL-13|
-monk.brownie|1|LOW|2|05-JUL-13|08-JUL-13|Beta|08-JUL-13|
-monk.brownie|1|LOW|0|04-JUL-13|05-JUL-13|Beta|05-JUL-13|
-monk.brownie|1|LOW|0|03-JUL-13|04-JUL-13|Beta|04-JUL-13|
-monk.brownie|1|LOW|0|02-JUL-13|03-JUL-13|Beta|03-JUL-13|
-monk.brownie|1|LOW|0|01-JUL-13|02-JUL-13|Beta|02-JUL-13|
-monk.brownie|1|LOW|1.5|28-JUN-13|01-JUL-13|Beta|01-JUL-13|
-monk.brownie|1|LOW|0|27-JUN-13|28-JUN-13|Beta|28-JUN-13|
-monk.brownie|1|LOW|0|26-JUN-13|27-JUN-13|Beta|27-JUN-13|
-monk.brownie|1|LOW|0|24-JUN-13|25-JUN-13|Beta|25-JUN-13|
-monk.brownie|1|LOW|0|18-JUN-13|19-JUN-13|Beta|19-JUN-13|
-monk.brownie|1|LOW|0|14-JUN-13|17-JUN-13|Beta|17-JUN-13|trip
-michael.mengueli|1|LOW|0|19-JUL-13|22-JUL-13|ESP_MGA|22-JUL-13|
-michael.mengueli|1|LOW|0|19-JUL-13|22-JUL-13|Beta|22-JUL-13|
-michael.mengueli|1|LOW|4|18-JUL-13|19-JUL-13|Beta|19-JUL-13|
-michael.mengueli|1|LOW|4|18-JUL-13|19-JUL-13|ESP_MGA|19-JUL-13|
-michael.mengueli|1|LOW|1|17-JUL-13|18-JUL-13|ESP_MGA|18-JUL-13|
-michael.mengueli|1|LOW|1|17-JUL-13|18-JUL-13|Beta|18-JUL-13|
-michael.mengueli|1|LOW|0|15-JUL-13|16-JUL-13|Beta|16-JUL-13|
-michael.mengueli|1|LOW|0|15-JUL-13|16-JUL-13|ESP_MGA|16-JUL-13|
-michael.mengueli|1|LOW|5.1|12-JUL-13|15-JUL-13|Beta|15-JUL-13|Doctors Appointment
-michael.mengueli|1|LOW|5.1|12-JUL-13|15-JUL-13|ESP_MGA|15-JUL-13|Doctors Appointment
-michael.mengueli|1|LOW|0|11-JUL-13|12-JUL-13|Beta|12-JUL-13|
-michael.mengueli|1|LOW|0|11-JUL-13|12-JUL-13|ESP_MGA|12-JUL-13|
-michael.mengueli|1|LOW|0|09-JUL-13|10-JUL-13|ESP_MGA|10-JUL-13|
-michael.mengueli|1|LOW|0|09-JUL-13|10-JUL-13|Beta|10-JUL-13|
-michael.mengueli|1|LOW|2.5|05-JUL-13|08-JUL-13|ESP_MGA|08-JUL-13|
-michael.mengueli|1|LOW|2.5|05-JUL-13|08-JUL-13|Beta|08-JUL-13|
-michael.mengueli|1|LOW|5.5|04-JUL-13|05-JUL-13|Beta|05-JUL-13|
-michael.mengueli|1|LOW|5.5|04-JUL-13|05-JUL-13|ESP_MGA|05-JUL-13|
-michael.mengueli|1|LOW|6|28-JUN-13|01-JUL-13|Beta|01-JUL-13|
-michael.mengueli|1|LOW|6|28-JUN-13|01-JUL-13|ESP_MGA|01-JUL-13|
-michael.mengueli|1|LOW|0|27-JUN-13|28-JUN-13|ESP_MGA|28-JUN-13|
-michael.mengueli|1|LOW|0|27-JUN-13|28-JUN-13|Beta|28-JUN-13|
-michael.mengueli|1|LOW|0|25-JUN-13|26-JUN-13|Beta|26-JUN-13|
-michael.mengueli|1|LOW|0|25-JUN-13|26-JUN-13|ESP_MGA|26-JUN-13|
-michael.mengueli|1|LOW|0|20-JUN-13|21-JUN-13|ESP_MGA|21-JUN-13|
-michael.mengueli|1|LOW|0|20-JUN-13|21-JUN-13|Beta|21-JUN-13|
-michael.mengueli|1|LOW|2|14-JUN-13|17-JUN-13|Beta|17-JUN-13|
-michael.mengueli|1|LOW|2|14-JUN-13|17-JUN-13|ESP_MGA|17-JUN-13|
-nataniel.steal|1|LOW|0|26-JUL-13|29-JUL-13|Development|29-JUL-13|
-nataniel.steal|1|LOW|0|25-JUL-13|26-JUL-13|Development|26-JUL-13|
-nataniel.steal|1|LOW|0|23-JUL-13|24-JUL-13|Development|24-JUL-13|
-nataniel.steal|1|LOW|0|22-JUL-13|23-JUL-13|Development|23-JUL-13|
-nataniel.steal|1|LOW|0|18-JUL-13|19-JUL-13|Development|19-JUL-13|
-nataniel.steal|1|LOW|0|17-JUL-13|18-JUL-13|Development|18-JUL-13|
-nataniel.steal|1|LOW|0|16-JUL-13|17-JUL-13|Development|17-JUL-13|
-nataniel.steal|1|LOW|0|15-JUL-13|16-JUL-13|Development|16-JUL-13|
-nataniel.steal|1|LOW|0|12-JUL-13|15-JUL-13|Development|15-JUL-13|
-nataniel.steal|1|LOW|0|10-JUL-13|11-JUL-13|Development|11-JUL-13|
-nataniel.steal|1|LOW|0|03-JUL-13|04-JUL-13|Development|04-JUL-13|
-nataniel.steal|1|LOW|0|02-JUL-13|03-JUL-13|Development|03-JUL-13|
-nataniel.steal|1|LOW|0|24-JUN-13|25-JUN-13|Development|25-JUN-13|
-nataniel.steal|1|LOW|0|20-JUN-13|21-JUN-13|Development|21-JUN-13|
-nataniel.steal|1|LOW|0|13-JUN-13|14-JUN-13|Development|14-JUN-13|
-olav.senior|1|LOW|5.7|26-JUL-13|29-JUL-13|Alpha|29-JUL-13|
-olav.senior|1|LOW|0|25-JUL-13|26-JUL-13|Alpha|26-JUL-13|
-olav.senior|1|LOW|0|12-JUL-13|15-JUL-13|Alpha|15-JUL-13|
-olav.senior|1|LOW|0|10-JUL-13|11-JUL-13|Alpha|11-JUL-13|
-olav.senior|1|LOW|0|09-JUL-13|10-JUL-13|Alpha|10-JUL-13|
-olav.senior|1|LOW|4.5|05-JUL-13|08-JUL-13|Alpha|08-JUL-13|
-olav.senior|1|LOW|0|27-JUN-13|28-JUN-13|Alpha|28-JUN-13|
-olav.senior|1|LOW|0|26-JUN-13|27-JUN-13|Alpha|27-JUN-13|was abducted by aliens
-olav.senior|1|LOW|0|24-JUN-13|25-JUN-13|Alpha|25-JUN-13|
-olav.senior|1|LOW|0|20-JUN-13|21-JUN-13|Alpha|21-JUN-13|
-ralph.contest|1|LOW|6.2|26-JUL-13|29-JUL-13|Alpha|29-JUL-13|
-ralph.contest|1|LOW|0|25-JUL-13|26-JUL-13|Alpha|26-JUL-13|
-ralph.contest|1|LOW|0|23-JUL-13|24-JUL-13|Alpha|24-JUL-13|
-ralph.contest|1|LOW|0|22-JUL-13|23-JUL-13|Alpha|23-JUL-13|
-ralph.contest|1|LOW|0|18-JUL-13|19-JUL-13|Alpha|19-JUL-13|
-ralph.contest|1|LOW|2.5|16-JUL-13|17-JUL-13|Alpha|17-JUL-13|
-ralph.contest|1|LOW|0|12-JUL-13|15-JUL-13|Alpha|15-JUL-13|
-ralph.contest|1|LOW|6.4|09-JUL-13|10-JUL-13|Alpha|10-JUL-13|
-ralph.contest|1|LOW|5.4|05-JUL-13|08-JUL-13|Alpha|08-JUL-13|idle
-ralph.contest|1|LOW|5.7|04-JUL-13|05-JUL-13|Alpha|05-JUL-13|
-ralph.contest|1|LOW|6.3|28-JUN-13|01-JUL-13|Alpha|01-JUL-13|
-ralph.contest|1|LOW|0|20-JUN-13|21-JUN-13|Alpha|21-JUN-13|
-ralph.sart|1|LOW|6.1|16-JUL-13|17-JUL-13|Development|17-JUL-13|Private stuff (logged in other issue)
-ralph.sart|1|LOW|6.1|15-JUL-13|16-JUL-13|Development|16-JUL-13|Private stuff (logged in other issue)
-ralph.sart|1|LOW|4.7|05-JUL-13|08-JUL-13|Development|08-JUL-13|
-ralph.sart|1|LOW|5|26-JUN-13|27-JUN-13|Development|27-JUN-13|Private stuff (logged in other issue)
-ralph.sart|1|LOW|0|25-JUN-13|26-JUN-13|Development|26-JUN-13|
-rheynald.fork|1|LOW|6.4|01-JUL-13|02-JUL-13|Alpha|02-JUL-13|
-rheynald.fork|1|LOW|0|20-JUN-13|21-JUN-13|Alpha|21-JUN-13|Medical leave
-rheynald.fork|1|LOW|0|19-JUN-13|20-JUN-13|Alpha|20-JUN-13|Medical leave
-rheynald.fork|1|LOW|0|18-JUN-13|19-JUN-13|Alpha|19-JUN-13|Medical leave
-robert.bruder|1|LOW|6|26-JUL-13|29-JUL-13|Beta|29-JUL-13|
-robert.bruder|1|LOW|0|23-JUL-13|24-JUL-13|Beta|24-JUL-13|
-robert.bruder|1|LOW|0|22-JUL-13|23-JUL-13|Beta|23-JUL-13|
-robert.bruder|1|LOW|0|18-JUL-13|19-JUL-13|Beta|19-JUL-13|
-robert.bruder|1|LOW|0|17-JUL-13|18-JUL-13|Beta|18-JUL-13|
-robert.bruder|1|LOW|0|16-JUL-13|17-JUL-13|Beta|17-JUL-13|
-robert.bruder|1|LOW|0|15-JUL-13|16-JUL-13|Beta|16-JUL-13|Was sick - went to the doctor
-robert.bruder|1|LOW|0|08-JUL-13|09-JUL-13|Beta|09-JUL-13|
-robert.bruder|1|LOW|0|04-JUL-13|05-JUL-13|Beta|05-JUL-13|
-robert.bruder|1|LOW|0|03-JUL-13|04-JUL-13|Beta|04-JUL-13|
-robert.bruder|1|LOW|0|28-JUN-13|01-JUL-13|Beta|01-JUL-13|
-robert.bruder|1|LOW|0|26-JUN-13|27-JUN-13|Beta|27-JUN-13|
-robert.bruder|1|LOW|0|25-JUN-13|26-JUN-13|Beta|26-JUN-13|No issue
-robert.bruder|1|LOW|0|24-JUN-13|25-JUN-13|Beta|25-JUN-13|No issue
-robert.dwart|1|LOW|0|26-JUL-13|29-JUL-13|Beta|29-JUL-13|
-robert.dwart|1|LOW|0|25-JUL-13|26-JUL-13|Beta|26-JUL-13|
-robert.dwart|1|LOW|0|24-JUL-13|25-JUL-13|Beta|25-JUL-13|
-robert.dwart|1|LOW|0|23-JUL-13|24-JUL-13|Beta|24-JUL-13|
-robert.dwart|1|LOW|0|22-JUL-13|23-JUL-13|Beta|23-JUL-13|
-robert.dwart|1|LOW|0|19-JUL-13|22-JUL-13|Beta|22-JUL-13|
-robert.dwart|1|LOW|0|18-JUL-13|19-JUL-13|Beta|19-JUL-13|
-robert.dwart|1|LOW|0|17-JUL-13|18-JUL-13|Beta|18-JUL-13|
-robert.dwart|1|LOW|0|16-JUL-13|17-JUL-13|Beta|17-JUL-13|
-robert.dwart|1|LOW|0|15-JUL-13|16-JUL-13|Beta|16-JUL-13|
-robert.dwart|1|LOW|0|12-JUL-13|15-JUL-13|Beta|15-JUL-13|
-robert.dwart|1|LOW|0|11-JUL-13|12-JUL-13|Beta|12-JUL-13|
-robert.dwart|1|LOW|0|10-JUL-13|11-JUL-13|Beta|11-JUL-13|
-robert.dwart|1|LOW|0|09-JUL-13|10-JUL-13|Beta|10-JUL-13|
-robert.dwart|1|LOW|0|08-JUL-13|09-JUL-13|Beta|09-JUL-13|
-robert.dwart|1|LOW|0|05-JUL-13|08-JUL-13|Beta|08-JUL-13|
-robert.dwart|1|LOW|0|04-JUL-13|05-JUL-13|Beta|05-JUL-13|
-robert.dwart|1|LOW|0|03-JUL-13|04-JUL-13|Beta|04-JUL-13|
-robert.dwart|1|LOW|0|02-JUL-13|03-JUL-13|Beta|03-JUL-13|
-robert.dwart|1|LOW|0|01-JUL-13|02-JUL-13|Beta|02-JUL-13|
-robert.dwart|1|LOW|0|28-JUN-13|01-JUL-13|Beta|01-JUL-13|
-robert.dwart|1|LOW|0|27-JUN-13|28-JUN-13|Beta|28-JUN-13|
-robert.dwart|1|LOW|0|26-JUN-13|27-JUN-13|Beta|27-JUN-13|
-robert.dwart|1|LOW|0|25-JUN-13|26-JUN-13|Beta|26-JUN-13|
-robert.dwart|1|LOW|0|24-JUN-13|25-JUN-13|Beta|25-JUN-13|
-robert.dwart|1|LOW|0|20-JUN-13|21-JUN-13|Beta|21-JUN-13|
-robert.dwart|1|LOW|0|18-JUN-13|19-JUN-13|Beta|19-JUN-13|
-rulphio|1|LOW|6.4|16-JUL-13|17-JUL-13|Development|17-JUL-13|
-sergey.loz|1|LOW|0|25-JUL-13|26-JUL-13|Development|26-JUL-13|
-sergey.loz|1|LOW|5.7|23-JUL-13|24-JUL-13|Development|24-JUL-13|Doctors Appointment
-sergey.loz|1|LOW|4.9|16-JUL-13|17-JUL-13|Development|17-JUL-13|His bike was kapput
-sergey.loz|1|LOW|0|15-JUL-13|16-JUL-13|Development|16-JUL-13|
-sergey.loz|1|LOW|0|10-JUL-13|11-JUL-13|Development|11-JUL-13|Doctors Appointment
-sergey.loz|1|LOW|4.5|09-JUL-13|10-JUL-13|Development|10-JUL-13|Doctors Appointment
-sergey.loz|1|LOW|0|18-JUN-13|19-JUN-13|Development|19-JUN-13|
-tim.letter|1|LOW|0.7|19-JUL-13|22-JUL-13|Development|22-JUL-13|Personal stuff
-tim.letter|1|LOW|0|12-JUL-13|15-JUL-13|Development|15-JUL-13|Personal stuff
-tim.letter|1|LOW|0|11-JUL-13|12-JUL-13|Development|12-JUL-13|Personal stuff
-tim.letter|1|LOW|0|10-JUL-13|11-JUL-13|Development|11-JUL-13|Personal stuff
-tim.letter|1|LOW|2.7|08-JUL-13|09-JUL-13|Development|09-JUL-13|Personal stuff
-tim.letter|1|LOW|6.3|04-JUL-13|05-JUL-13|Development|05-JUL-13|
-tim.letter|1|LOW|5.2|25-JUN-13|26-JUN-13|Development|26-JUN-13|
-vinnie.devitto|1|LOW|5.8|09-JUL-13|10-JUL-13|Beta|10-JUL-13|
-willie|1|LOW|0|26-JUL-13|29-JUL-13|Beta|29-JUL-13|Vacations
-willie|1|LOW|0|12-JUL-13|15-JUL-13|Beta|15-JUL-13|Vacations
-willie|1|LOW|0|11-JUL-13|12-JUL-13|Beta|12-JUL-13|
-willie|1|LOW|0|13-JUN-13|14-JUN-13|Beta|14-JUN-13|
-willie.clumpsy|1|LOW|0|26-JUL-13|29-JUL-13|Development|29-JUL-13|
-willie.clumpsy|1|LOW|0|26-JUL-13|29-JUL-13|Beta|29-JUL-13|
-willie.clumpsy|1|LOW|0|24-JUL-13|25-JUL-13|Development|25-JUL-13|
-willie.clumpsy|1|LOW|0|24-JUL-13|25-JUL-13|Beta|25-JUL-13|
-willie.clumpsy|1|LOW|0|23-JUL-13|24-JUL-13|Development|24-JUL-13|
-willie.clumpsy|1|LOW|0|23-JUL-13|24-JUL-13|Beta|24-JUL-13|
-willie.clumpsy|1|LOW|1|19-JUL-13|22-JUL-13|Beta|22-JUL-13|
-willie.clumpsy|1|LOW|1|19-JUL-13|22-JUL-13|Development|22-JUL-13|
-willie.clumpsy|1|LOW|0|17-JUL-13|18-JUL-13|Beta|18-JUL-13|
-willie.clumpsy|1|LOW|0|17-JUL-13|18-JUL-13|Development|18-JUL-13|
-willie.clumpsy|1|LOW|0|12-JUL-13|15-JUL-13|Beta|15-JUL-13|
-willie.clumpsy|1|LOW|0|12-JUL-13|15-JUL-13|Development|15-JUL-13|was abducted by aliens
-willie.clumpsy|1|LOW|0|27-JUN-13|28-JUN-13|Beta|28-JUN-13|
-willie.clumpsy|1|LOW|0|27-JUN-13|28-JUN-13|Development|28-JUN-13|
-willie.clumpsy|1|LOW|0|26-JUN-13|27-JUN-13|Development|27-JUN-13|
-willie.clumpsy|1|LOW|0|26-JUN-13|27-JUN-13|Beta|27-JUN-13|
-willie.clumpsy|1|LOW|0|25-JUN-13|26-JUN-13|Beta|26-JUN-13|
-willie.clumpsy|1|LOW|0|25-JUN-13|26-JUN-13|Development|26-JUN-13|
-willie.clumpsy|1|LOW|0|24-JUN-13|25-JUN-13|Development|25-JUN-13|was abducted by aliens
-willie.clumpsy|1|LOW|0|24-JUN-13|25-JUN-13|Beta|25-JUN-13|
-willie.clumpsy|1|LOW|0|20-JUN-13|21-JUN-13|Development|21-JUN-13|
-willie.clumpsy|1|LOW|0|20-JUN-13|21-JUN-13|Beta|21-JUN-13|
-willie.clumpsy|1|LOW|0|19-JUN-13|20-JUN-13|Beta|20-JUN-13|
-willie.clumpsy|1|LOW|0|19-JUN-13|20-JUN-13|Development|20-JUN-13|
-willie.clumpsy|1|LOW|0|18-JUN-13|19-JUN-13|Beta|19-JUN-13|
-willie.clumpsy|1|LOW|0|18-JUN-13|19-JUN-13|Development|19-JUN-13|
-willie.clumpsy|1|LOW|0|14-JUN-13|17-JUN-13|Beta|17-JUN-13|
-willie.clumpsy|1|LOW|0|14-JUN-13|17-JUN-13|Development|17-JUN-13|
-willie.clumpsy|1|LOW|0|13-JUN-13|14-JUN-13|Development|14-JUN-13|
-willie.clumpsy|1|LOW|0|13-JUN-13|14-JUN-13|Beta|14-JUN-13|
+andy.rodrigues|0|LOW|0|25-07-13|26-07-13|Alpha|26-07-13|
+andy.rodrigues|1|LOW|0|24-07-13|25-07-13|Alpha|25-07-13|
+andy.rodrigues|2|LOW|0|17-07-13|18-07-13|Alpha|18-07-13|
+andy.rodrigues|0|LOW|6.4|03-07-13|04-07-13|Alpha|04-07-13|
+andy.rodrigues|1|LOW|0|02-07-13|03-07-13|Alpha|03-07-13|
+andy.rodrigues|2|LOW|0|01-07-13|02-07-13|Alpha|02-07-13|
+andy.rodrigues|1|LOW|0|28-06-13|01-07-13|Alpha|01-07-13|
+andy.rodrigues|2|LOW|0|27-06-13|28-06-13|Alpha|28-06-13|
+andy.rodrigues|0|LOW|0|26-06-13|27-06-13|Alpha|27-06-13|
+andy.rodrigues|1|LOW|0|25-06-13|26-06-13|Alpha|26-06-13|
+baron.henry|1|LOW|2.5|25-07-13|26-07-13|Alpha|26-07-13|
+baron.henry|0|LOW|0|17-07-13|18-07-13|Alpha|18-07-13|
+baron.henry|1|LOW|4|09-07-13|10-07-13|Alpha|10-07-13|
+baron.henry|0|LOW|0|08-07-13|09-07-13|Alpha|09-07-13|
+baron.henry|1|LOW|3.9|03-07-13|04-07-13|Alpha|04-07-13|
+baron.henry|2|LOW|0|02-07-13|03-07-13|Alpha|03-07-13|
+baron.henry|1|LOW|3|01-07-13|02-07-13|Alpha|02-07-13|
+baron.henry|2|LOW|0|28-06-13|01-07-13|Alpha|01-07-13|
+baron.henry|1|LOW|0|27-06-13|28-06-13|Alpha|28-06-13|
+baron.henry|2|LOW|0|26-06-13|27-06-13|Alpha|27-06-13|
+baron.henry|1|LOW|5.5|14-06-13|17-06-13|Alpha|17-06-13|
+dilbert.panda|1|LOW|0|25-07-13|26-07-13|Beta|26-07-13|
+dilbert.panda|2|LOW|0|23-07-13|24-07-13|Beta|24-07-13|
+dilbert.panda|3|LOW|0|17-07-13|18-07-13|Beta|18-07-13|
+dilbert.panda|3|LOW|0|16-07-13|17-07-13|Beta|17-07-13|
+dilbert.panda|5|LOW|0|15-07-13|16-07-13|Beta|16-07-13|
+dilbert.panda|1|LOW|0|13-06-13|14-06-13|Beta|14-06-13|
+eddie.noble|1|LOW|6|26-07-13|29-07-13|Alpha|29-07-13|
+eddie.noble|2|LOW|6.4|26-06-13|27-06-13|Alpha|27-06-13|
+eddie.noble|0|LOW|6.4|19-06-13|20-06-13|Alpha|20-06-13|
+edy.gui|1|LOW|6.3|26-07-13|29-07-13|Alpha|29-07-13|
+edy.gui|1|LOW|6|23-07-13|24-07-13|Alpha|24-07-13|
+edy.gui|1|LOW|0|22-07-13|23-07-13|Alpha|23-07-13|
+edy.gui|1|LOW|5.7|08-07-13|09-07-13|Alpha|09-07-13|Dentist Appointment
+edy.gui|1|LOW|2.6|03-07-13|04-07-13|Alpha|04-07-13|
+edy.gui|1|LOW|0|13-06-13|14-06-13|Alpha|14-06-13|
+ewald.crat|1|LOW|0|26-07-13|29-07-13|Development|29-07-13|
+ewald.crat|1|LOW|0|25-07-13|26-07-13|Development|26-07-13|
+ewald.crat|1|LOW|5|23-07-13|24-07-13|Development|24-07-13|Doctors Appointment
+ewald.crat|1|LOW|0|22-07-13|23-07-13|Development|23-07-13|
+ewald.crat|1|LOW|0|18-07-13|19-07-13|Development|19-07-13|
+ewald.crat|1|LOW|0|17-07-13|18-07-13|Development|18-07-13|
+ewald.crat|1|LOW|0|16-07-13|17-07-13|Development|17-07-13|
+ewald.crat|1|LOW|0|15-07-13|16-07-13|Development|16-07-13|
+ewald.crat|1|LOW|0|12-07-13|15-07-13|Development|15-07-13|
+ewald.crat|1|LOW|0|11-07-13|12-07-13|Development|12-07-13|
+ewald.crat|1|LOW|0|10-07-13|11-07-13|Development|11-07-13|
+ewald.crat|1|LOW|0|09-07-13|10-07-13|Development|10-07-13|
+ewald.crat|1|LOW|0|08-07-13|09-07-13|Development|09-07-13|
+ewald.crat|1|LOW|0|03-07-13|04-07-13|Development|04-07-13|
+ewald.crat|1|LOW|0|02-07-13|03-07-13|Development|03-07-13|
+ewald.crat|1|LOW|0|01-07-13|02-07-13|Development|02-07-13|
+ewald.crat|1|LOW|0|28-06-13|01-07-13|Development|01-07-13|
+ewald.crat|1|LOW|6.4|27-06-13|28-06-13|Development|28-06-13|
+ewald.crat|1|LOW|0|26-06-13|27-06-13|Development|27-06-13|
+ewald.crat|1|LOW|0|25-06-13|26-06-13|Development|26-06-13|
+ewald.crat|1|LOW|0|24-06-13|25-06-13|Development|25-06-13|
+ewald.crat|1|LOW|0|20-06-13|21-06-13|Development|21-06-13|
+ewald.crat|1|LOW|0|19-06-13|20-06-13|Development|20-06-13|
+ewald.crat|1|LOW|0|18-06-13|19-06-13|Development|19-06-13|
+ewald.crat|1|LOW|0|14-06-13|17-06-13|Development|17-06-13|
+ewald.crat|1|LOW|0|13-06-13|14-06-13|Development|14-06-13|
+filipa.karols|1|LOW|4.6|19-07-13|22-07-13|Beta|22-07-13|Her hubby was sick
+filipa.karols|1|LOW|0|18-07-13|19-07-13|Beta|19-07-13|
+filipa.karols|1|LOW|5.9|09-07-13|10-07-13|Beta|10-07-13|
+filipa.karols|1|LOW|6.1|05-07-13|08-07-13|Beta|08-07-13|
+filipa.karols|1|LOW|6.2|04-07-13|05-07-13|Beta|05-07-13|English class
+filipa.karols|1|LOW|6.4|26-06-13|27-06-13|Beta|27-06-13|
+filipa.karols|1|LOW|0|25-06-13|26-06-13|Beta|26-06-13|
+filipa.karols|1|LOW|3.9|24-06-13|25-06-13|Beta|25-06-13|
+filipa.karols|1|LOW|5.7|20-06-13|21-06-13|Beta|21-06-13|
+filipa.karols|1|LOW|2.4|14-06-13|17-06-13|Beta|17-06-13|Took a break
+filipa.karols|1|LOW|5.6|13-06-13|14-06-13|Beta|14-06-13|Idle
+filipo.jack|1|LOW|0|19-07-13|22-07-13|Beta|22-07-13|
+filipo.jack|1|LOW|0|19-07-13|22-07-13|Development|22-07-13|
+filipo.jack|1|LOW|0|16-07-13|17-07-13|Beta|17-07-13|
+filipo.jack|1|LOW|0|16-07-13|17-07-13|Development|17-07-13|
+filipo.jack|1|LOW|4.7|11-07-13|12-07-13|Beta|12-07-13|
+filipo.jack|1|LOW|4.7|11-07-13|12-07-13|Development|12-07-13|
+filipoh.yok|1|LOW|0|26-07-13|29-07-13|Development|29-07-13|
+filipoh.yok|1|LOW|0|16-07-13|17-07-13|Development|17-07-13|
+filipoh.yok|1|LOW|0|15-07-13|16-07-13|Development|16-07-13|
+filipoh.yok|1|LOW|0|12-07-13|15-07-13|Development|15-07-13|
+filipoh.yok|1|LOW|0|10-07-13|11-07-13|Development|11-07-13|
+filipoh.yok|1|LOW|0|04-07-13|05-07-13|Development|05-07-13|
+filipoh.yok|1|LOW|5.5|03-07-13|04-07-13|Development|04-07-13|Doctors Appointment
+filipoh.yok|1|LOW|2.5|13-06-13|14-06-13|Development|14-06-13|
+gabby.eps|1|LOW|0|23-07-13|24-07-13|Alpha|24-07-13|
+gabby.eps|1|LOW|0|23-07-13|24-07-13|Beta|24-07-13|
+gabby.eps|1|LOW|4.6|22-07-13|23-07-13|Beta|23-07-13|
+gabby.eps|1|LOW|4.6|22-07-13|23-07-13|Alpha|23-07-13|
+gabby.eps|1|LOW|0|19-07-13|22-07-13|Beta|22-07-13|
+gabby.eps|1|LOW|0|19-07-13|22-07-13|Alpha|22-07-13|
+gabby.eps|1|LOW|0|11-07-13|12-07-13|Beta|12-07-13|
+gabby.eps|1|LOW|0|11-07-13|12-07-13|Alpha|12-07-13|
+gabby.eps|1|LOW|6.2|09-07-13|10-07-13|Alpha|10-07-13|
+gabby.eps|1|LOW|6.2|09-07-13|10-07-13|Beta|10-07-13|
+gabby.eps|1|LOW|0|24-06-13|25-06-13|Beta|25-06-13|
+gabby.eps|1|LOW|0|24-06-13|25-06-13|Alpha|25-06-13|
+gabby.eps|1|LOW|5.9|18-06-13|19-06-13|Beta|19-06-13|Doctors Appointment
+gabby.eps|1|LOW|5.9|18-06-13|19-06-13|Alpha|19-06-13|Doctors Appointment
+gap.shivas|1|LOW|0|25-07-13|26-07-13|Development|26-07-13|
+gap.shivas|1|LOW|0|24-07-13|25-07-13|Development|25-07-13|
+gap.shivas|1|LOW|0|19-07-13|22-07-13|Development|22-07-13|vacation woohooo
+gap.shivas|1|LOW|0|08-07-13|09-07-13|Development|09-07-13|Vacations
+gap.shivas|1|LOW|0|27-06-13|28-06-13|Development|28-06-13|
+gap.shivas|1|LOW|0|20-06-13|21-06-13|Development|21-06-13|
+gap.shivas|1|LOW|0|19-06-13|20-06-13|Development|20-06-13|
+gap.shivas|1|LOW|5|18-06-13|19-06-13|Development|19-06-13|
+gap.shivas|1|LOW|0|13-06-13|14-06-13|Development|14-06-13|
+gerald.krato|1|LOW|0|26-07-13|29-07-13|Alpha|29-07-13|
+gerald.krato|1|LOW|0|25-07-13|26-07-13|Alpha|26-07-13|
+gerald.krato|1|LOW|0|24-07-13|25-07-13|Alpha|25-07-13|
+gerald.krato|1|LOW|0|23-07-13|24-07-13|Alpha|24-07-13|
+gerald.krato|1|LOW|0|22-07-13|23-07-13|Alpha|23-07-13|
+gerald.krato|1|LOW|0|19-07-13|22-07-13|Alpha|22-07-13|
+gerald.krato|1|LOW|0|17-07-13|18-07-13|Alpha|18-07-13|
+gerald.krato|1|LOW|0|16-07-13|17-07-13|Alpha|17-07-13|
+gerald.krato|1|LOW|0|15-07-13|16-07-13|Alpha|16-07-13|
+gerald.krato|1|LOW|0|12-07-13|15-07-13|Alpha|15-07-13|
+gerald.krato|1|LOW|0|11-07-13|12-07-13|Alpha|12-07-13|
+gerald.krato|1|LOW|0|10-07-13|11-07-13|Alpha|11-07-13|
+gerald.krato|1|LOW|0|09-07-13|10-07-13|Alpha|10-07-13|
+gerald.krato|1|LOW|0|08-07-13|09-07-13|Alpha|09-07-13|
+gerald.krato|1|LOW|0|05-07-13|08-07-13|Alpha|08-07-13|
+gerald.krato|1|LOW|0|04-07-13|05-07-13|Alpha|05-07-13|
+gerald.krato|1|LOW|0|03-07-13|04-07-13|Alpha|04-07-13|
+gerald.krato|1|LOW|0|02-07-13|03-07-13|Alpha|03-07-13|
+gerald.krato|1|LOW|0|01-07-13|02-07-13|Alpha|02-07-13|
+gerald.krato|1|LOW|0|28-06-13|01-07-13|Alpha|01-07-13|
+gerald.krato|1|LOW|0|24-06-13|25-06-13|Alpha|25-06-13|
+gerald.krato|1|LOW|0|20-06-13|21-06-13|Alpha|21-06-13|he was on medical leave
+gerald.krato|1|LOW|0|19-06-13|20-06-13|Alpha|20-06-13|he was on medical leave
+gerald.krato|1|LOW|0|18-06-13|19-06-13|Alpha|19-06-13|he was on medical leave
+gerald.krato|1|LOW|0|14-06-13|17-06-13|Alpha|17-06-13|
+gerald.krato|1|LOW|0|13-06-13|14-06-13|Alpha|14-06-13|
+gui.andel|1|LOW|0|24-07-13|25-07-13|Specs|25-07-13|
+gui.andel|1|LOW|0|24-07-13|25-07-13|Beta|25-07-13|
+gui.andel|1|LOW|0|22-07-13|23-07-13|Specs|23-07-13|
+gui.andel|1|LOW|0|22-07-13|23-07-13|Beta|23-07-13|
+gui.andel|1|LOW|0|18-07-13|19-07-13|Beta|19-07-13|
+gui.andel|1|LOW|0|18-07-13|19-07-13|Specs|19-07-13|
+gui.andel|1|LOW|0|16-07-13|17-07-13|Specs|17-07-13|
+gui.andel|1|LOW|0|16-07-13|17-07-13|Beta|17-07-13|
+gui.andel|1|LOW|0|11-07-13|12-07-13|Beta|12-07-13|
+gui.andel|1|LOW|0|11-07-13|12-07-13|Specs|12-07-13|
+gui.andel|1|LOW|0|10-07-13|11-07-13|Specs|11-07-13|
+gui.andel|1|LOW|0|10-07-13|11-07-13|Beta|11-07-13|
+gui.andel|1|LOW|0|09-07-13|10-07-13|Beta|10-07-13|
+gui.andel|1|LOW|0|09-07-13|10-07-13|Specs|10-07-13|
+gui.andel|1|LOW|0|05-07-13|08-07-13|Beta|08-07-13|
+gui.andel|1|LOW|0|05-07-13|08-07-13|Specs|08-07-13|
+gui.andel|1|LOW|0|03-07-13|04-07-13|Specs|04-07-13|
+gui.andel|1|LOW|0|03-07-13|04-07-13|Beta|04-07-13|
+gui.andel|1|LOW|0|02-07-13|03-07-13|Specs|03-07-13|
+gui.andel|1|LOW|0|02-07-13|03-07-13|Beta|03-07-13|
+gui.andel|1|LOW|0|28-06-13|01-07-13|Specs|01-07-13|
+gui.andel|1|LOW|0|28-06-13|01-07-13|Beta|01-07-13|
+gui.andel|1|LOW|0|27-06-13|28-06-13|Beta|28-06-13|
+gui.andel|1|LOW|0|27-06-13|28-06-13|Specs|28-06-13|
+gui.andel|1|LOW|0|26-06-13|27-06-13|Specs|27-06-13|
+gui.andel|1|LOW|0|26-06-13|27-06-13|Beta|27-06-13|
+gui.andel|1|LOW|0|24-06-13|25-06-13|Beta|25-06-13|
+gui.andel|1|LOW|0|24-06-13|25-06-13|Specs|25-06-13|
+gui.ironside|1|LOW|0|26-07-13|29-07-13|Development|29-07-13|
+gui.easter|1|LOW|3.5|24-06-13|25-06-13|Development|25-06-13|iddle
+gui.easter|1|LOW|0|13-06-13|14-06-13|Development|14-06-13|
+hermez.reggie|1|LOW|4.6|24-07-13|25-07-13|Development|25-07-13|Doctors Appointment
+hermez.reggie|1|LOW|0|18-07-13|19-07-13|Development|19-07-13|
+hermez.reggie|1|LOW|0|11-07-13|12-07-13|Development|12-07-13|
+hermez.reggie|1|LOW|6.3|05-07-13|08-07-13|Development|08-07-13|
+hermez.reggie|1|LOW|6.1|02-07-13|03-07-13|Development|03-07-13|
+jeorge.kron|1|LOW|4.7|22-07-13|23-07-13|Alpha|23-07-13|Doctors Appointment
+jeorge.kron|1|LOW|4.7|22-07-13|23-07-13|Development|23-07-13|Doctors Appointment
+jeorge.kron|1|LOW|4.7|22-07-13|23-07-13|Beta|23-07-13|Doctors Appointment
+jhorel.singer|1|LOW|6.4|23-07-13|24-07-13|Beta|24-07-13|
+jhorel.singer|1|LOW|5.1|22-07-13|23-07-13|Beta|23-07-13|Doctors Appointment
+jhorel.singer|1|LOW|0|17-07-13|18-07-13|Beta|18-07-13|
+jhorel.singer|1|LOW|5.9|09-07-13|10-07-13|Beta|10-07-13|
+jhorel.singer|1|LOW|0|27-06-13|28-06-13|Beta|28-06-13|Doc
+jhorel.singer|1|LOW|4.3|24-06-13|25-06-13|Beta|25-06-13|
+jhorel.singer|1|LOW|5.7|18-06-13|19-06-13|Beta|19-06-13|Wife as sick
+jhorel.singer|1|LOW|5.4|13-06-13|14-06-13|Beta|14-06-13|Idle
+jorgie.son|1|LOW|0|26-07-13|29-07-13|Development|29-07-13|
+jorgie.son|1|LOW|0|24-07-13|25-07-13|Development|25-07-13|
+jorgie.son|1|LOW|0|23-07-13|24-07-13|Development|24-07-13|
+jorgie.son|1|LOW|0|18-07-13|19-07-13|Development|19-07-13|
+jorgie.son|1|LOW|0|16-07-13|17-07-13|Development|17-07-13|
+jorgie.son|1|LOW|0|15-07-13|16-07-13|Development|16-07-13|
+jorgie.son|1|LOW|0|11-07-13|12-07-13|Development|12-07-13|
+jorgie.son|1|LOW|0|10-07-13|11-07-13|Development|11-07-13|
+jorgie.son|1|LOW|0|08-07-13|09-07-13|Development|09-07-13|
+jorgie.son|1|LOW|0|05-07-13|08-07-13|Development|08-07-13|
+jorgie.son|1|LOW|0|03-07-13|04-07-13|Development|04-07-13|
+jorgie.son|1|LOW|0|28-06-13|01-07-13|Development|01-07-13|
+jorgie.son|1|LOW|0|27-06-13|28-06-13|Development|28-06-13|
+jorgie.son|1|LOW|0|26-06-13|27-06-13|Development|27-06-13|
+jorgie.son|1|LOW|0|25-06-13|26-06-13|Development|26-06-13|
+jorgie.son|1|LOW|0|20-06-13|21-06-13|Development|21-06-13|
+jorgie.son|1|LOW|0|19-06-13|20-06-13|Development|20-06-13|
+jorgie.son|1|LOW|0|18-06-13|19-06-13|Development|19-06-13|
+jorgie.son|1|LOW|0|14-06-13|17-06-13|Development|17-06-13|
+louie.july|1|LOW|0|18-07-13|19-07-13|Development|19-07-13|
+louie.july|1|LOW|0|10-07-13|11-07-13|Development|11-07-13|
+louie.july|1|LOW|0|13-06-13|14-06-13|Development|14-06-13|
+louie.sea|1|LOW|5.1|26-07-13|29-07-13|Alpha|29-07-13|
+louie.sea|1|LOW|0|25-07-13|26-07-13|Alpha|26-07-13|
+louie.sea|1|LOW|1.3|12-07-13|15-07-13|Alpha|15-07-13|Medical leave/Idle
+louie.sea|1|LOW|5.3|05-07-13|08-07-13|Alpha|08-07-13|idle
+louie.sea|1|LOW|5.6|04-07-13|05-07-13|Alpha|05-07-13|
+louie.sea|1|LOW|6.3|27-06-13|28-06-13|Alpha|28-06-13|
+louie.paul|1|LOW|0|01-07-13|02-07-13|Alpha|02-07-13|Vacations
+louie.paul|1|LOW|0|20-06-13|21-06-13|Alpha|21-06-13|Lost one teeth
+louie.paul|1|LOW|0|19-06-13|20-06-13|Alpha|20-06-13|Medical stuff
+louie.paul|1|LOW|0|18-06-13|19-06-13|Alpha|19-06-13|Medical stuff
+louie.abroad|1|LOW|5.7|23-07-13|24-07-13|Alpha|24-07-13|
+louie.abroad|1|LOW|6.4|22-07-13|23-07-13|Alpha|23-07-13|
+louie.abroad|1|LOW|6.3|19-07-13|22-07-13|Alpha|22-07-13|
+louie.abroad|1|LOW|0|17-07-13|18-07-13|Alpha|18-07-13|
+louie.abroad|1|LOW|6.4|12-07-13|15-07-13|Alpha|15-07-13|
+louie.abroad|1|LOW|0|18-06-13|19-06-13|Alpha|19-06-13|Vacations
+louie.abroad|1|LOW|0|14-06-13|17-06-13|Alpha|17-06-13|Vacations
+louie.abroad|1|LOW|0|13-06-13|14-06-13|Alpha|14-06-13|Vacations
+mark.pumper|1|LOW|0|25-07-13|26-07-13|Development|26-07-13|
+mark.pumper|1|LOW|0|18-07-13|19-07-13|Development|19-07-13|
+mark.pumper|1|LOW|6|18-06-13|19-06-13|Development|19-06-13|
+mark.pumper|1|LOW|0|14-06-13|17-06-13|Development|17-06-13|
+mark.drinkez|1|LOW|0|10-07-13|11-07-13|Beta|11-07-13|
+mark.drinkez|1|LOW|0|09-07-13|10-07-13|Beta|10-07-13|
+mark.drinkez|1|LOW|0|08-07-13|09-07-13|Beta|09-07-13|
+mark.drinkez|1|LOW|0|28-06-13|01-07-13|Beta|01-07-13|
+mark.drinkez|1|LOW|0|25-06-13|26-06-13|Beta|26-06-13|No issue at the time
+mark.drinkez|1|LOW|0|24-06-13|25-06-13|Beta|25-06-13|No issue at the time
+mark.drinkez|1|LOW|0|18-06-13|19-06-13|Beta|19-06-13|
+mark.drinkez|1|LOW|3.9|13-06-13|14-06-13|Beta|14-06-13|
+mark.tzsu|1|LOW|0|08-07-13|09-07-13|Alpha|09-07-13|Vacations
+mark.tzsu|1|LOW|6.4|20-06-13|21-06-13|Alpha|21-06-13|
+markz.branch|1|LOW|5.6|24-06-13|25-06-13|Beta|25-06-13|
+markx.vinnie|1|LOW|0|23-07-13|24-07-13|Alpha|24-07-13|
+markx.vinnie|1|LOW|4.9|19-07-13|22-07-13|Alpha|22-07-13|
+markx.vinnie|1|LOW|0|25-06-13|26-06-13|Alpha|26-06-13|
+monk.brownie|1|LOW|0|25-07-13|26-07-13|Beta|26-07-13|
+monk.brownie|1|LOW|0|24-07-13|25-07-13|Beta|25-07-13|
+monk.brownie|1|LOW|0|23-07-13|24-07-13|Beta|24-07-13|
+monk.brownie|1|LOW|6.3|22-07-13|23-07-13|Beta|23-07-13|
+monk.brownie|1|LOW|6.1|19-07-13|22-07-13|Beta|22-07-13|
+monk.brownie|1|LOW|0|18-07-13|19-07-13|Beta|19-07-13|
+monk.brownie|1|LOW|0|17-07-13|18-07-13|Beta|18-07-13|
+monk.brownie|1|LOW|0|15-07-13|16-07-13|Beta|16-07-13|
+monk.brownie|1|LOW|0|12-07-13|15-07-13|Beta|15-07-13|
+monk.brownie|1|LOW|0|10-07-13|11-07-13|Beta|11-07-13|
+monk.brownie|1|LOW|0|09-07-13|10-07-13|Beta|10-07-13|
+monk.brownie|1|LOW|2|05-07-13|08-07-13|Beta|08-07-13|
+monk.brownie|1|LOW|0|04-07-13|05-07-13|Beta|05-07-13|
+monk.brownie|1|LOW|0|03-07-13|04-07-13|Beta|04-07-13|
+monk.brownie|1|LOW|0|02-07-13|03-07-13|Beta|03-07-13|
+monk.brownie|1|LOW|0|01-07-13|02-07-13|Beta|02-07-13|
+monk.brownie|1|LOW|1.5|28-06-13|01-07-13|Beta|01-07-13|
+monk.brownie|1|LOW|0|27-06-13|28-06-13|Beta|28-06-13|
+monk.brownie|1|LOW|0|26-06-13|27-06-13|Beta|27-06-13|
+monk.brownie|1|LOW|0|24-06-13|25-06-13|Beta|25-06-13|
+monk.brownie|1|LOW|0|18-06-13|19-06-13|Beta|19-06-13|
+monk.brownie|1|LOW|0|14-06-13|17-06-13|Beta|17-06-13|trip
+michael.mengueli|1|LOW|0|19-07-13|22-07-13|Specs|22-07-13|
+michael.mengueli|1|LOW|0|19-07-13|22-07-13|Beta|22-07-13|
+michael.mengueli|1|LOW|4|18-07-13|19-07-13|Beta|19-07-13|
+michael.mengueli|1|LOW|4|18-07-13|19-07-13|Specs|19-07-13|
+michael.mengueli|1|LOW|1|17-07-13|18-07-13|Specs|18-07-13|
+michael.mengueli|1|LOW|1|17-07-13|18-07-13|Beta|18-07-13|
+michael.mengueli|1|LOW|0|15-07-13|16-07-13|Beta|16-07-13|
+michael.mengueli|1|LOW|0|15-07-13|16-07-13|Specs|16-07-13|
+michael.mengueli|1|LOW|5.1|12-07-13|15-07-13|Beta|15-07-13|Doctors Appointment
+michael.mengueli|1|LOW|5.1|12-07-13|15-07-13|Specs|15-07-13|Doctors Appointment
+michael.mengueli|1|LOW|0|11-07-13|12-07-13|Beta|12-07-13|
+michael.mengueli|1|LOW|0|11-07-13|12-07-13|Specs|12-07-13|
+michael.mengueli|1|LOW|0|09-07-13|10-07-13|Specs|10-07-13|
+michael.mengueli|1|LOW|0|09-07-13|10-07-13|Beta|10-07-13|
+michael.mengueli|1|LOW|2.5|05-07-13|08-07-13|Specs|08-07-13|
+michael.mengueli|1|LOW|2.5|05-07-13|08-07-13|Beta|08-07-13|
+michael.mengueli|1|LOW|5.5|04-07-13|05-07-13|Beta|05-07-13|
+michael.mengueli|1|LOW|5.5|04-07-13|05-07-13|Specs|05-07-13|
+michael.mengueli|1|LOW|6|28-06-13|01-07-13|Beta|01-07-13|
+michael.mengueli|1|LOW|6|28-06-13|01-07-13|Specs|01-07-13|
+michael.mengueli|1|LOW|0|27-06-13|28-06-13|Specs|28-06-13|
+michael.mengueli|1|LOW|0|27-06-13|28-06-13|Beta|28-06-13|
+michael.mengueli|1|LOW|0|25-06-13|26-06-13|Beta|26-06-13|
+michael.mengueli|1|LOW|0|25-06-13|26-06-13|Specs|26-06-13|
+michael.mengueli|1|LOW|0|20-06-13|21-06-13|Specs|21-06-13|
+michael.mengueli|1|LOW|0|20-06-13|21-06-13|Beta|21-06-13|
+michael.mengueli|1|LOW|2|14-06-13|17-06-13|Beta|17-06-13|
+michael.mengueli|1|LOW|2|14-06-13|17-06-13|Specs|17-06-13|
+nataniel.steal|1|LOW|0|26-07-13|29-07-13|Development|29-07-13|
+nataniel.steal|1|LOW|0|25-07-13|26-07-13|Development|26-07-13|
+nataniel.steal|1|LOW|0|23-07-13|24-07-13|Development|24-07-13|
+nataniel.steal|1|LOW|0|22-07-13|23-07-13|Development|23-07-13|
+nataniel.steal|1|LOW|0|18-07-13|19-07-13|Development|19-07-13|
+nataniel.steal|1|LOW|0|17-07-13|18-07-13|Development|18-07-13|
+nataniel.steal|1|LOW|0|16-07-13|17-07-13|Development|17-07-13|
+nataniel.steal|1|LOW|0|15-07-13|16-07-13|Development|16-07-13|
+nataniel.steal|1|LOW|0|12-07-13|15-07-13|Development|15-07-13|
+nataniel.steal|1|LOW|0|10-07-13|11-07-13|Development|11-07-13|
+nataniel.steal|1|LOW|0|03-07-13|04-07-13|Development|04-07-13|
+nataniel.steal|1|LOW|0|02-07-13|03-07-13|Development|03-07-13|
+nataniel.steal|1|LOW|0|24-06-13|25-06-13|Development|25-06-13|
+nataniel.steal|1|LOW|0|20-06-13|21-06-13|Development|21-06-13|
+nataniel.steal|1|LOW|0|13-06-13|14-06-13|Development|14-06-13|
+olav.senior|1|LOW|5.7|26-07-13|29-07-13|Alpha|29-07-13|
+olav.senior|1|LOW|0|25-07-13|26-07-13|Alpha|26-07-13|
+olav.senior|1|LOW|0|12-07-13|15-07-13|Alpha|15-07-13|
+olav.senior|1|LOW|0|10-07-13|11-07-13|Alpha|11-07-13|
+olav.senior|1|LOW|0|09-07-13|10-07-13|Alpha|10-07-13|
+olav.senior|1|LOW|4.5|05-07-13|08-07-13|Alpha|08-07-13|
+olav.senior|1|LOW|0|27-06-13|28-06-13|Alpha|28-06-13|
+olav.senior|1|LOW|0|26-06-13|27-06-13|Alpha|27-06-13|was abducted by aliens
+olav.senior|1|LOW|0|24-06-13|25-06-13|Alpha|25-06-13|
+olav.senior|1|LOW|0|20-06-13|21-06-13|Alpha|21-06-13|
+ralph.contest|1|LOW|6.2|26-07-13|29-07-13|Alpha|29-07-13|
+ralph.contest|1|LOW|0|25-07-13|26-07-13|Alpha|26-07-13|
+ralph.contest|1|LOW|0|23-07-13|24-07-13|Alpha|24-07-13|
+ralph.contest|1|LOW|0|22-07-13|23-07-13|Alpha|23-07-13|
+ralph.contest|1|LOW|0|18-07-13|19-07-13|Alpha|19-07-13|
+ralph.contest|1|LOW|2.5|16-07-13|17-07-13|Alpha|17-07-13|
+ralph.contest|1|LOW|0|12-07-13|15-07-13|Alpha|15-07-13|
+ralph.contest|1|LOW|6.4|09-07-13|10-07-13|Alpha|10-07-13|
+ralph.contest|1|LOW|5.4|05-07-13|08-07-13|Alpha|08-07-13|idle
+ralph.contest|1|LOW|5.7|04-07-13|05-07-13|Alpha|05-07-13|
+ralph.contest|1|LOW|6.3|28-06-13|01-07-13|Alpha|01-07-13|
+ralph.contest|1|LOW|0|20-06-13|21-06-13|Alpha|21-06-13|
+ralph.sart|1|LOW|6.1|16-07-13|17-07-13|Development|17-07-13|Private stuff (logged in other issue)
+ralph.sart|1|LOW|6.1|15-07-13|16-07-13|Development|16-07-13|Private stuff (logged in other issue)
+ralph.sart|1|LOW|4.7|05-07-13|08-07-13|Development|08-07-13|
+ralph.sart|1|LOW|5|26-06-13|27-06-13|Development|27-06-13|Private stuff (logged in other issue)
+ralph.sart|1|LOW|0|25-06-13|26-06-13|Development|26-06-13|
+rheynald.fork|1|LOW|6.4|01-07-13|02-07-13|Alpha|02-07-13|
+rheynald.fork|1|LOW|0|20-06-13|21-06-13|Alpha|21-06-13|Medical leave
+rheynald.fork|1|LOW|0|19-06-13|20-06-13|Alpha|20-06-13|Medical leave
+rheynald.fork|1|LOW|0|18-06-13|19-06-13|Alpha|19-06-13|Medical leave
+robert.bruder|1|LOW|6|26-07-13|29-07-13|Beta|29-07-13|
+robert.bruder|1|LOW|0|23-07-13|24-07-13|Beta|24-07-13|
+robert.bruder|1|LOW|0|22-07-13|23-07-13|Beta|23-07-13|
+robert.bruder|1|LOW|0|18-07-13|19-07-13|Beta|19-07-13|
+robert.bruder|1|LOW|0|17-07-13|18-07-13|Beta|18-07-13|
+robert.bruder|1|LOW|0|16-07-13|17-07-13|Beta|17-07-13|
+robert.bruder|1|LOW|0|15-07-13|16-07-13|Beta|16-07-13|Was sick - went to the doctor
+robert.bruder|1|LOW|0|08-07-13|09-07-13|Beta|09-07-13|
+robert.bruder|1|LOW|0|04-07-13|05-07-13|Beta|05-07-13|
+robert.bruder|1|LOW|0|03-07-13|04-07-13|Beta|04-07-13|
+robert.bruder|1|LOW|0|28-06-13|01-07-13|Beta|01-07-13|
+robert.bruder|1|LOW|0|26-06-13|27-06-13|Beta|27-06-13|
+robert.bruder|1|LOW|0|25-06-13|26-06-13|Beta|26-06-13|No issue
+robert.bruder|1|LOW|0|24-06-13|25-06-13|Beta|25-06-13|No issue
+robert.dwart|1|LOW|0|26-07-13|29-07-13|Beta|29-07-13|
+robert.dwart|1|LOW|0|25-07-13|26-07-13|Beta|26-07-13|
+robert.dwart|1|LOW|0|24-07-13|25-07-13|Beta|25-07-13|
+robert.dwart|1|LOW|0|23-07-13|24-07-13|Beta|24-07-13|
+robert.dwart|1|LOW|0|22-07-13|23-07-13|Beta|23-07-13|
+robert.dwart|1|LOW|0|19-07-13|22-07-13|Beta|22-07-13|
+robert.dwart|1|LOW|0|18-07-13|19-07-13|Beta|19-07-13|
+robert.dwart|1|LOW|0|17-07-13|18-07-13|Beta|18-07-13|
+robert.dwart|1|LOW|0|16-07-13|17-07-13|Beta|17-07-13|
+robert.dwart|1|LOW|0|15-07-13|16-07-13|Beta|16-07-13|
+robert.dwart|1|LOW|0|12-07-13|15-07-13|Beta|15-07-13|
+robert.dwart|1|LOW|0|11-07-13|12-07-13|Beta|12-07-13|
+robert.dwart|1|LOW|0|10-07-13|11-07-13|Beta|11-07-13|
+robert.dwart|1|LOW|0|09-07-13|10-07-13|Beta|10-07-13|
+robert.dwart|1|LOW|0|08-07-13|09-07-13|Beta|09-07-13|
+robert.dwart|1|LOW|0|05-07-13|08-07-13|Beta|08-07-13|
+robert.dwart|1|LOW|0|04-07-13|05-07-13|Beta|05-07-13|
+robert.dwart|1|LOW|0|03-07-13|04-07-13|Beta|04-07-13|
+robert.dwart|1|LOW|0|02-07-13|03-07-13|Beta|03-07-13|
+robert.dwart|1|LOW|0|01-07-13|02-07-13|Beta|02-07-13|
+robert.dwart|1|LOW|0|28-06-13|01-07-13|Beta|01-07-13|
+robert.dwart|1|LOW|0|27-06-13|28-06-13|Beta|28-06-13|
+robert.dwart|1|LOW|0|26-06-13|27-06-13|Beta|27-06-13|
+robert.dwart|1|LOW|0|25-06-13|26-06-13|Beta|26-06-13|
+robert.dwart|1|LOW|0|24-06-13|25-06-13|Beta|25-06-13|
+robert.dwart|1|LOW|0|20-06-13|21-06-13|Beta|21-06-13|
+robert.dwart|1|LOW|0|18-06-13|19-06-13|Beta|19-06-13|
+rulphio|1|LOW|6.4|16-07-13|17-07-13|Development|17-07-13|
+sergey.loz|1|LOW|0|25-07-13|26-07-13|Development|26-07-13|
+sergey.loz|1|LOW|5.7|23-07-13|24-07-13|Development|24-07-13|Doctors Appointment
+sergey.loz|1|LOW|4.9|16-07-13|17-07-13|Development|17-07-13|His bike was kapput
+sergey.loz|1|LOW|0|15-07-13|16-07-13|Development|16-07-13|
+sergey.loz|1|LOW|0|10-07-13|11-07-13|Development|11-07-13|Doctors Appointment
+sergey.loz|1|LOW|4.5|09-07-13|10-07-13|Development|10-07-13|Doctors Appointment
+sergey.loz|1|LOW|0|18-06-13|19-06-13|Development|19-06-13|
+tim.letter|1|LOW|0.7|19-07-13|22-07-13|Development|22-07-13|Personal stuff
+tim.letter|1|LOW|0|12-07-13|15-07-13|Development|15-07-13|Personal stuff
+tim.letter|1|LOW|0|11-07-13|12-07-13|Development|12-07-13|Personal stuff
+tim.letter|1|LOW|0|10-07-13|11-07-13|Development|11-07-13|Personal stuff
+tim.letter|1|LOW|2.7|08-07-13|09-07-13|Development|09-07-13|Personal stuff
+tim.letter|1|LOW|6.3|04-07-13|05-07-13|Development|05-07-13|
+tim.letter|1|LOW|5.2|25-06-13|26-06-13|Development|26-06-13|
+vinnie.devitto|1|LOW|5.8|09-07-13|10-07-13|Beta|10-07-13|
+willie|1|LOW|0|26-07-13|29-07-13|Beta|29-07-13|Vacations
+willie|1|LOW|0|12-07-13|15-07-13|Beta|15-07-13|Vacations
+willie|1|LOW|0|11-07-13|12-07-13|Beta|12-07-13|
+willie|1|LOW|0|13-06-13|14-06-13|Beta|14-06-13|
+willie.clumpsy|0|LOW|0|26-07-13|29-07-13|Development|29-07-13|
+willie.clumpsy|1|LOW|0|26-07-13|29-07-13|Beta|29-07-13|
+willie.clumpsy|2|LOW|0|24-07-13|25-07-13|Development|25-07-13|
+willie.clumpsy|3|LOW|0|24-07-13|25-07-13|Beta|25-07-13|
+willie.clumpsy|3|LOW|0|23-07-13|24-07-13|Development|24-07-13|
+willie.clumpsy|3|LOW|0|23-07-13|24-07-13|Beta|24-07-13|
+willie.clumpsy|2|LOW|1|19-07-13|22-07-13|Beta|22-07-13|
+willie.clumpsy|1|LOW|1|19-07-13|22-07-13|Development|22-07-13|
+willie.clumpsy|0|LOW|0|17-07-13|18-07-13|Beta|18-07-13|
+willie.clumpsy|0|LOW|0|17-07-13|18-07-13|Development|18-07-13|
+willie.clumpsy|1|LOW|0|12-07-13|15-07-13|Beta|15-07-13|
+willie.clumpsy|2|LOW|0|12-07-13|15-07-13|Development|15-07-13|was abducted by aliens
+willie.clumpsy|3|LOW|0|27-06-13|28-06-13|Beta|28-06-13|
+willie.clumpsy|3|LOW|0|27-06-13|28-06-13|Development|28-06-13|
+willie.clumpsy|3|LOW|0|26-06-13|27-06-13|Development|27-06-13|
+willie.clumpsy|3|LOW|0|26-06-13|27-06-13|Beta|27-06-13|
+willie.clumpsy|2|LOW|0|25-06-13|26-06-13|Beta|26-06-13|
+willie.clumpsy|1|LOW|0|25-06-13|26-06-13|Development|26-06-13|
+willie.clumpsy|0|LOW|0|24-06-13|25-06-13|Development|25-06-13|was abducted by aliens
+willie.clumpsy|0|LOW|0|24-06-13|25-06-13|Beta|25-06-13|
+willie.clumpsy|1|LOW|0|20-06-13|21-06-13|Development|21-06-13|
+willie.clumpsy|1|LOW|0|20-06-13|21-06-13|Beta|21-06-13|
+willie.clumpsy|2|LOW|0|19-06-13|20-06-13|Beta|20-06-13|
+willie.clumpsy|2|LOW|0|19-06-13|20-06-13|Development|20-06-13|
+willie.clumpsy|3|LOW|0|18-06-13|19-06-13|Beta|19-06-13|
+willie.clumpsy|3|LOW|0|18-06-13|19-06-13|Development|19-06-13|
+willie.clumpsy|3|LOW|0|14-06-13|17-06-13|Beta|17-06-13|
+willie.clumpsy|3|LOW|0|14-06-13|17-06-13|Development|17-06-13|
+willie.clumpsy|3|LOW|0|13-06-13|14-06-13|Development|14-06-13|
+willie.clumpsy|3|LOW|0|13-06-13|14-06-13|Beta|14-06-13|

@@ -117,7 +117,6 @@ class MainView {
   }
 
   val cancelButton = new Button("Cancel") {
-    disable = true
     prefWidth = 100
     onAction = onCancelAction
     disable <== when(controller.isDirty) choose true otherwise false
@@ -127,22 +126,30 @@ class MainView {
     text = "User"
     prefWidth = 150
     resizable = true
-    editable = false
+    sortable = true
     cellValueFactory = { e: MyColumnFeature => ReadOnlyStringWrapper(e.getValue.user.name) }
   }
 
   val teamCol = new TableColumn[MissAppointment, String] {
     text = "Team"
     prefWidth = 80
-    editable = false
     cellValueFactory = { e: MyColumnFeature => ReadOnlyStringWrapper(e.getValue.user.team.name) }
   }
 
-  val dateCol = new TableColumn[MissAppointment, String] {
+  val startDateCol = new TableColumn[MissAppointment, String] {
     text = "Start Dt"
     prefWidth = 70
     resizable = false
+    sortable = true
     cellValueFactory = (e: MyColumnFeature) => ReadOnlyStringWrapper(e.getValue.startDate)
+  }
+  
+  val endDateCol = new TableColumn[MissAppointment, String] {
+	  text = "End Dt"
+	  prefWidth = 70
+	  resizable = false
+	  sortable = true
+	  cellValueFactory = (e: MyColumnFeature) => ReadOnlyStringWrapper(e.getValue.endDate)
   }
 
   val logTypeCol = new TableColumn[MissAppointment, String] {
@@ -156,6 +163,7 @@ class MainView {
     text = "Lvl"
     prefWidth = 40
     resizable = false
+    sortable = true
     cellValueFactory = (e: MyColumnFeature) => ReadOnlyStringWrapper(e.getValue.levelLog.toString)
   }
 
@@ -186,7 +194,7 @@ class MainView {
     editable = true
     prefWidth = 720
     prefHeight = 400
-    columns ++= List(userCol, teamCol, dateCol, logTypeCol, levelCol, workedCol, reasonCol)
+    columns ++= List(userCol, teamCol, startDateCol, endDateCol, logTypeCol, levelCol, workedCol, reasonCol)
   }
 
   def root: Node = {

@@ -1,7 +1,7 @@
 .dirtyCell { 
-	-fx-background-color: cornsilk;
+	-fx-background-color: rgb(241,163,170) ;
 }
 
 .dirtyCell:selected {
-	-fx-background-color: red;
+	-fx-background-color: rgb(214,176,176);
 }

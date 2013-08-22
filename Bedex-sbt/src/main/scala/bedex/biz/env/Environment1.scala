@@ -41,14 +41,15 @@ object Environment1 {
   private lazy val logs: Array[MissAppointment] =
     for (line <- linesFor("export_log.dsv")) yield {
       val user: User = users.find(_.name == line(0)).get
-      val startDate: Date = new SimpleDateFormat("dd-MMM-YY").parse(line(4))
-      val endDate: Date = new SimpleDateFormat("dd-MMM-YY").parse(line(4))
-      val worked: Float = line(3).toFloat
-      val reason: String = if (line.length > 8) line(8) else ""
+      val levelLog = line(1).toInt
       val typeLog = Symbol(line(2))
+      val worked: Float = line(3).toFloat
+      val startDate: Date = new SimpleDateFormat("dd-MM-yy").parse(line(4))
+      val endDate: Date = new SimpleDateFormat("dd-MM-yy").parse(line(5))
+      val reason: String = if (line.length > 8) line(8) else ""
 
-      val miss = MissAppointment(user, startDate, endDate, worked, typeLog, reason)
-      logger.debug("Log loaded: {}", miss)
+      val miss = MissAppointment(user, startDate, endDate, worked, typeLog, reason, levelLog)
+      logger.debug("Log loaded: {} ", miss)
       miss
     }
 

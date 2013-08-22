@@ -12,3 +12,6 @@
 
 # ignore local production file
 db.properties
+
+.worksheet
+target

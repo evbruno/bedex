@@ -86,7 +86,7 @@ case class MissAppointment(
   val worked: Float,
   val typeLog: Symbol = 'LOW,
   private val reason_ : String,
-  val levelLog: Int = 1) {
+  val levelLog: Int) {
 
   assert(reason_ != null, "I dont like null reasons. Please, send me an empty string instead")
   assert(Array('LOW, 'HIGH) contains (typeLog))
