@@ -47,7 +47,7 @@ class WorklogStage(data: ObservableBuffer[Worklog]) extends Stage with ShutdownA
   Bootstrap.register(this)
 
   def shutdown() = {
-    logger.debug("Shutting down")
+    logger.info("Shutting down")
     close()
   }
 

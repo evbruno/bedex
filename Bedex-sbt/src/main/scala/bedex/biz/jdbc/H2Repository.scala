@@ -7,20 +7,23 @@ import bedex.biz._
 object H2Repository extends Repository {
 
   private implicit var conn: Connection = _
+  private var url: String = _
 
   def connectTo(url: String, user: String, passwd: String) = {
     Class.forName("org.h2.Driver")
     conn = DriverManager.getConnection(url, user, passwd)
     conn.setAutoCommit(false)
+
+    this.url = url
   }
 
   def allTeams: List[Team] =  query(defaultSelectTeamSQL)(incarnateTeam)
 
   def allUsers: List[User] = query(defaultSelectUserSQL)(incarnateUser)
 
-  def allMissAppointments: List[MissAppointment] = 
+  def allMissAppointments: List[MissAppointment] =
     query(defaultSelectMissAppointmentsSQL)(incarnateMissAppointment)
-    
+
   def lastWorklogFrom(user: User) = null
 
   override def update(miss: MissAppointment): Unit = {
@@ -30,6 +33,7 @@ object H2Repository extends Repository {
   }
 
   def shutdown() = {
+    logger.info("Desconecting from {}", url)
     conn.close
   }
 

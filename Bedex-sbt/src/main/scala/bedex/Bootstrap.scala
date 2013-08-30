@@ -48,20 +48,24 @@ class Bootstrap private (params: Parameters) extends ShutdownAgent {
 
   // init
 
-  if (params.named.contains(DB_URL)) parseNamedParams(params)
-  else if (dbFileExists) parseDBFile
-  else inMemory
-
-  initFXStuff
+  initRepository()
+  initFXStuff()
 
   // defs
 
-  def initFXStuff {
+  def initRepository() {
+    if (params.named.contains(DB_URL)) parseNamedParams(params)
+    else if (dbFileExists) parseDBFile
+    else inMemory
+
+    Bootstrap.register(Domain.repository)
+  }
+
+  def initFXStuff() {
     JFXApp.AUTO_SHOW = false
   }
 
   def shutdown() = {
-    Domain.repository.shuwtdown
     Bootstrap.shutdown
     logger.info("Shutting down")
   }

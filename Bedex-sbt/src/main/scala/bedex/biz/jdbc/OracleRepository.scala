@@ -24,32 +24,32 @@ object OracleRepository extends Repository {
   // AND m.start_date > SYSDATE - ???
   def allMissAppointments: List[MissAppointment] = {
     val sql =
-      """SELECT m.start_date l_start_date, 
-    				m.end_date l_end_date, 
-    				m.type_log l_type_log, 
-    				m.level_log l_level_log, 
-    				m.worked l_worked, 
-    				m.expected l_expected, 
-    				m.reason l_reason, 
-    				u.user_name u_user_name, 
-    				u.team t_name, 
+      """SELECT m.start_date l_start_date,
+    				m.end_date l_end_date,
+    				m.type_log l_type_log,
+    				m.level_log l_level_log,
+    				m.worked l_worked,
+    				m.expected l_expected,
+    				m.reason l_reason,
+    				u.user_name u_user_name,
+    				u.team t_name,
     				t.coach t_coach,
     				t.manager t_manager
 				FROM LOGMISSAPPOINTMENT m, USER_TEAM  u, TEAM t
-				WHERE u.team = t.name 
-    				AND m.user_name = u.user_name 
-    				AND m.start_date > (SYSDATE - 14) 
+				WHERE u.team = t.name
+    				AND m.user_name = u.user_name
+    				AND m.start_date > (SYSDATE - 14)
 				ORDER BY m.start_date DESC"""
 
     query(sql)(incarnateMissAppointment)
   }
-  
+
   def lastWorklogFrom(user: User) = null
 
   override def update(miss: MissAppointment): Unit = {
     val sql = """UPDATE LOGMISSAPPOINTMENT l
 			SET l.reason = ?
-			WHERE 
+			WHERE
 			  l.type_log = ?
 			  AND l.level_log = ?
 			  AND l.end_date = ?
