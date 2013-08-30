@@ -9,7 +9,7 @@ object H2Repository extends Repository {
   private implicit var conn: Connection = _
   private var url: String = _
 
-  def connectTo(url: String, user: String, passwd: String) = {
+  def connectTo(url: String, user: String = null, passwd: String = null) = {
     Class.forName("org.h2.Driver")
     conn = DriverManager.getConnection(url, user, passwd)
     conn.setAutoCommit(false)
@@ -17,14 +17,15 @@ object H2Repository extends Repository {
     this.url = url
   }
 
-  def allTeams: List[Team] =  query(defaultSelectTeamSQL)(incarnateTeam)
+  def allTeams: List[Team] = query(defaultSelectTeamSQL)(incarnateTeam)
 
   def allUsers: List[User] = query(defaultSelectUserSQL)(incarnateUser)
 
   def allMissAppointments: List[MissAppointment] =
     query(defaultSelectMissAppointmentsSQL)(incarnateMissAppointment)
 
-  def lastWorklogFrom(user: User) = null
+  def lastWorklogFrom(user: User) =
+    preparedQuery(defaultSelectWorklogSummarySQL)(_.setString(1, user.name))(incarnateWorklog _)
 
   override def update(miss: MissAppointment): Unit = {
     executeUpdate(defaultUpdateMissAppointmentSQL) {

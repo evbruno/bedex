@@ -25,7 +25,7 @@ package object jdbc {
   // constants
 
   lazy val defaultSelectTeamSQL =
-    """SELECT name t_name, coach t_coach, manager t_manager 
+    """SELECT name t_name, coach t_coach, manager t_manager
     		FROM TEAM order by t_name ASC"""
 
   lazy val defaultSelectUserSQL =
@@ -35,36 +35,62 @@ package object jdbc {
     		ORDER BY u_user_name"""
 
   lazy val defaultSelectMissAppointmentsSQL =
-    """SELECT m.start_date l_start_date, 
-    				m.end_date l_end_date, 
-    				m.type_log l_type_log, 
-    				m.level_log l_level_log, 
-    				m.worked l_worked, 
-    				m.expected l_expected, 
-    				m.reason l_reason, 
-    				u.user_name u_user_name, 
-    				u.team t_name, 
+    """SELECT m.start_date l_start_date,
+    				m.end_date l_end_date,
+    				m.type_log l_type_log,
+    				m.level_log l_level_log,
+    				m.worked l_worked,
+    				m.expected l_expected,
+    				m.reason l_reason,
+    				u.user_name u_user_name,
+    				u.team t_name,
     				t.coach t_coach,
     				t.manager t_manager
 			FROM LOGMISSAPPOINTMENT m, USER_TEAM  u, TEAM t
-			WHERE u.team = t.name AND m.user_name = u.user_name 
+			WHERE u.team = t.name AND m.user_name = u.user_name
 			ORDER BY m.start_date DESC"""
 
-    
-   lazy val defaultUpdateMissAppointmentSQL =
+  lazy val defaultUpdateMissAppointmentSQL =
     """UPDATE LOGMISSAPPOINTMENT l
 			SET l.reason = ?
-			WHERE 
+			WHERE
 			  l.type_log = ?
 			  AND l.level_log = ?
 			  AND l.end_date = ?
 			  AND l.user_name = ?"""
-     
+
+  lazy val defaultSelectWorklogSummarySQL =
+    """SELECT w.worked_date,
+		            w.worked_time,
+    				u.user_name u_user_name,
+    				u.team t_name,
+    				t.coach t_coach,
+    				t.manager t_manager
+			FROM WORKLOG_SUMMARY w, USER_TEAM  u, TEAM t
+			WHERE u.team = t.name AND w.user_name = u.user_name
+    			AND u.user_name = ?
+			ORDER BY w.worked_date ASC"""
+
   // jdbc
 
   def query[T](sql: String)(functor: ResultSet => T)(implicit connection: Connection): List[T] = {
     val stmt = connection.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY)
     val rs = stmt.executeQuery(sql)
+
+    // (for (row <- new ResultSetIterator(rs)) yield functor(row)).toList
+    new ResultSetIterator(rs).map(functor).toList
+  }
+
+   def preparedQuery[T](sql: String)
+   		(prepare: PreparedStatement => Unit)
+   		(functor: ResultSet => T)
+  		(implicit connection: Connection): List[T] = {
+
+    val stmt = connection.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY)
+
+    prepare(stmt)
+
+    val rs = stmt.executeQuery()
 
     // (for (row <- new ResultSetIterator(rs)) yield functor(row)).toList
     new ResultSetIterator(rs).map(functor).toList
@@ -102,4 +128,7 @@ package object jdbc {
     Symbol(rs.getString("l_type_log")),
     rs.getString("l_reason").nullToEmpty,
     rs.getInt("l_level_log"))
+
+    def incarnateWorklog(rs: ResultSet) =
+      Worklog(incarnateUser(rs), rs.getDate("worked_date"), rs.getFloat("worked_time"))
 }

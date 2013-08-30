@@ -11,7 +11,7 @@ object H2Spikes extends App {
   Class forName "org.h2.Driver"
 
   // Setup the connection
-  val url = "jdbc:h2:~/test_h2"
+  val url = "jdbc:h2:~/test_env"
 
   implicit val conn = DriverManager.getConnection(url)
 
@@ -19,35 +19,42 @@ object H2Spikes extends App {
     // CREATE TABLES
 
     executeSql("""
-      create table TEAM ( 
-    		name VARCHAR(50), 
-    		coach VARCHAR(50), 
+      create table TEAM (
+    		name VARCHAR(50),
+    		coach VARCHAR(50),
     		manager VARCHAR(50)
     	)
         """)
 
     executeSql("""
         create table USER_TEAM (
-    		user_name VARCHAR(50), 
+    		user_name VARCHAR(50),
     		team VARCHAR(50),
     		end_date DATE
         )
         """)
 
     executeSql("""
-    	CREATE TABLE LOGMISSAPPOINTMENT (	
-    		USER_NAME VARCHAR(50), 
-			COACH VARCHAR(50), 
-			MANAGER VARCHAR(50), 
-			START_DATE DATE, 
-			END_DATE DATE, 
-			TYPE_LOG VARCHAR(5), 
-			LEVEL_LOG NUMBER, 
-			WORKED NUMBER, 
-			EXPECTED NUMBER, 
-			MSG VARCHAR(1000), 
-			MSGTIME DATE, 
+    	CREATE TABLE LOGMISSAPPOINTMENT (
+    		USER_NAME VARCHAR(50),
+			COACH VARCHAR(50),
+			MANAGER VARCHAR(50),
+			START_DATE DATE,
+			END_DATE DATE,
+			TYPE_LOG VARCHAR(5),
+			LEVEL_LOG NUMBER,
+			WORKED NUMBER,
+			EXPECTED NUMBER,
+			MSG VARCHAR(1000),
+			MSGTIME DATE,
 			REASON VARCHAR(1000)
+   ) """)
+
+   executeSql("""
+    	CREATE TABLE WORKLOG_SUMMARY (
+		    USER_NAME VARCHAR(50),
+		    WORKED_DATE DATE,
+			WORKED_TIME NUMBER
    ) """)
 
     // INSERTS
@@ -69,11 +76,20 @@ object H2Spikes extends App {
     println("--------- Inserting MissAppointmens")
 
     val missSql = for (miss <- Environment1.missAppointmentList)
-      yield """INSERT INTO LOG_MISSAPPOINTMENT (user, start_date, end_date, worked, type_log, reason) 
+      yield """INSERT INTO LOGMISSAPPOINTMENT (user_name, start_date, end_date, worked, type_log, reason)
     		VALUES ('%s', '%s', '%s', '%s', '%s', '%s')"""
       .format(miss.user.name, toS(miss.startDate), toS(miss.endDate), miss.worked, miss.typeLog.toString.drop(1), miss.reason.get)
 
     executeBatchSql(missSql)
+
+    println("--------- Inserting Worklogs")
+
+    val logsSql = for (worklog <- Environment1.worklogList)
+    	yield """INSERT INTO WORKLOG_SUMMARY (user_name, worked_date, worked_time)
+    	VALUES ('%s', '%s', '%s')"""
+    	.format(worklog.user.name, toS(worklog.date), worklog.worked)
+
+    	executeBatchSql(logsSql)
 
   } finally {
     conn.close
