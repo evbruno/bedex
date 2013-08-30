@@ -1,5 +1,6 @@
 package bedex.view
 
+import bedex._
 import bedex.biz.Worklog
 import javafx.beans.property.SimpleStringProperty
 import scalafx.application.JFXApp
@@ -15,8 +16,11 @@ import scalafx.stage.Stage
 import scalafx.stage.Stage.sfxStage2jfx
 import scalafx.stage.StageStyle
 import scalafx.stage.Window.sfxWindow2jfx
+import org.slf4j.LoggerFactory
 
-class WorklogStage(data: ObservableBuffer[Worklog]) extends Stage {
+class WorklogStage(data: ObservableBuffer[Worklog]) extends Stage with ShutdownAgent {
+
+  private val logger = LoggerFactory.getLogger(getClass)
 
   initStyle(StageStyle.UTILITY)
   initOwner(JFXApp.STAGE)
@@ -38,6 +42,13 @@ class WorklogStage(data: ObservableBuffer[Worklog]) extends Stage {
   data.onChange {
     if (data.isEmpty) worklogUserName.set(noWorklog)
     else worklogUserName.set(data.head.user.name)
+  }
+
+  Bootstrap.register(this)
+
+  def shutdown() = {
+    logger.debug("Shutting down")
+    close()
   }
 
 }

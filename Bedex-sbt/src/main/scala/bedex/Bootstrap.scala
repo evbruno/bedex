@@ -9,15 +9,30 @@ import bedex.biz.jdbc.H2Repository
 import bedex.biz.jdbc.OracleRepository
 import scalafx.application.JFXApp.Parameters
 import scalafx.application.JFXApp
+import scala.collection.mutable.ArrayBuffer
 
 object Bootstrap {
 
   def apply(params: Parameters) = new Bootstrap(params)
 
+  private val shutdownAgents = new ArrayBuffer[ShutdownAgent]
+
+  def register(shut: ShutdownAgent) {
+    shutdownAgents += shut
+  }
+
+  private def shutdown = shutdownAgents.foreach(_.shutdown())
+
+}
+
+trait ShutdownAgent {
+
+  def shutdown()
+
 }
 
 // FIXME use class "scala.util.Either" instead of throwing exceptions !?
-class Bootstrap private (params: Parameters) {
+class Bootstrap private (params: Parameters) extends ShutdownAgent {
 
   private val logger = LoggerFactory.getLogger(getClass)
 
@@ -39,7 +54,6 @@ class Bootstrap private (params: Parameters) {
 
   initFXStuff
 
-
   // defs
 
   def initFXStuff {
@@ -48,6 +62,7 @@ class Bootstrap private (params: Parameters) {
 
   def shutdown() = {
     Domain.repository.shuwtdown
+    Bootstrap.shutdown
     logger.info("Shutting down")
   }
 

@@ -24,7 +24,6 @@ object BedexApp extends JFXApp {
     onCloseRequest = new EventHandler[WindowEvent]() {
       override def handle(ev: WindowEvent) = {
         bootstrap.shutdown
-        Platform.exit
       }
     }
 
