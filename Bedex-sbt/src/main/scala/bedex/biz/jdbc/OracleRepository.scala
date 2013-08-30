@@ -43,6 +43,8 @@ object OracleRepository extends Repository {
 
     query(sql)(incarnateMissAppointment)
   }
+  
+  def lastWorklogFrom(user: User) = null
 
   override def update(miss: MissAppointment): Unit = {
     val sql = """UPDATE LOGMISSAPPOINTMENT l

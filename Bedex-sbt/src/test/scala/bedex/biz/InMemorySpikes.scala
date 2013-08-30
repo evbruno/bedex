@@ -13,5 +13,9 @@ object InMemorySpikes extends App {
   println(InMemory.allMissAppointments(0))
   println(InMemory.allMissAppointments(t0).mkString("\n"))
   println(InMemory.allMissAppointments(u0).mkString("\n"))
+  
+  val will = InMemory.allUsers.find(_.name == "willie.clumpsy").get
+  println("--- worklogs ----")
+  println(InMemory.lastWorklogFrom(will).mkString("\n"))
 
 }

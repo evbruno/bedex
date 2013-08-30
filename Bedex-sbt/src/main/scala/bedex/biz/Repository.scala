@@ -25,6 +25,8 @@ trait Repository {
     logger.debug("Updating MissAppointment {}", miss)
   }
   
+  def lastWorklogFrom(user: User): List[Worklog]
+  
   def shuwtdown = ()
 
 }
@@ -39,4 +41,6 @@ object InMemory extends Repository {
 
   def allMissAppointments = environment.missAppointmentList
 
+  def lastWorklogFrom(user: User) = environment.worklogList.filter(_.user == user)
+  
 }

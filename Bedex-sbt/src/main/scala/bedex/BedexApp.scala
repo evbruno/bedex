@@ -5,6 +5,7 @@ import scalafx.application.JFXApp
 import scalafx.scene.Scene
 import javafx.event.EventHandler
 import javafx.stage.WindowEvent
+import scalafx.application.Platform
 
 object BedexApp extends JFXApp {
 
@@ -22,9 +23,15 @@ object BedexApp extends JFXApp {
     scene = mainScene
     onCloseRequest = new EventHandler[WindowEvent]() {
       override def handle(ev: WindowEvent) = {
-    	  bootstrap.shutdown
+        bootstrap.shutdown
+        Platform.exit
       }
     }
+
   }
+
+  stage.x = 75
+  stage.y = 75
+  stage.show
 
 }

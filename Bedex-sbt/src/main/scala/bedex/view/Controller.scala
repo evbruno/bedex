@@ -2,16 +2,10 @@ package bedex.view
 
 import scala.collection.mutable.ArrayBuffer
 import scala.language.implicitConversions
-import bedex.biz.MissAppointment
-import bedex.biz.MissAppointments
-import bedex.biz.NoTeam
-import bedex.biz.NoUser
-import bedex.biz.Team
-import bedex.biz.Teams
-import bedex.biz.User
-import bedex.biz.Users
+import bedex.biz._
 import scalafx.collections.ObservableBuffer
 import org.slf4j.LoggerFactory
+import scalafx.beans.property.BooleanProperty
 
 abstract class FilterOption(val name: String) {
   override def toString = name
@@ -56,7 +50,7 @@ class Controller {
     val logs = missApointments(team, user)
 
     import bedex.biz.Domain._
-    
+
     logger.debug("Filter logs#size = {} with level = {}", logs.size, level)
 
     level match {
@@ -65,34 +59,53 @@ class Controller {
     }
   }
 
-  private lazy val dirty = ObservableBuffer(ArrayBuffer[MissAppointment]())
+  lazy val worklogsBuffer = ObservableBuffer(ArrayBuffer[Worklog]())
 
-  lazy val isDirty = {
-    val ret = new javafx.beans.property.SimpleBooleanProperty(dirty.isEmpty)
-    dirty onChange { ret set (dirty.isEmpty) }
-    ret
+  def lastWorklogsFrom(user: User) {
+    if (worklogsBuffer.isEmpty) {
+      worklogsBuffer.appendAll(Worklogs.lastFrom(user))
+      logger.debug("Searching for last worklogs from {} => {} found", user, worklogsBuffer.size)
+    } else if (worklogsBuffer.head.user != user) {
+      worklogsBuffer.clear
+      worklogsBuffer.appendAll(Worklogs.lastFrom(user))
+      logger.debug("RE-Searching for last worklogs from {} => {} found", user, worklogsBuffer.size)
+    } else
+      logger.debug("Current user {}", user)
   }
 
+  private lazy val dirtyBuffer = new ReactiveBuffer[MissAppointment]
+
+  lazy val isEmpty: BooleanProperty = dirtyBuffer.isEmptyProperty
+
   def putDirty(miss: MissAppointment) = {
-    dirty += miss
+    dirtyBuffer += miss
   }
 
   def save() = {
     logger.debug("Saving ...")
-    for (m <- dirty) {
+    for (m <- dirtyBuffer) {
       logger.debug("Saving {} with new reason {} for {}", m.user.name, m.reason.get, m.user)
       m.commit()
     }
-    dirty.clear()
+    dirtyBuffer.clear()
   }
 
   def cancel() = {
     logger.debug("Canceling ...")
-    for (m <- dirty) {
+    for (m <- dirtyBuffer) {
       logger.debug("Canceling op {} with new reason {} for {}", m.user.name, m.reason.get, m.user)
       m.rollback()
     }
-    dirty.clear()
+    dirtyBuffer.clear()
   }
 
+}
+
+class ReactiveBuffer[T] extends ObservableBuffer[T] {
+
+  val isEmptyProperty = new BooleanProperty { value = true }
+
+  ReactiveBuffer.this.onChange {
+    isEmptyProperty.set(isEmpty)
+  }
 }

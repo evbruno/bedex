@@ -108,14 +108,20 @@ case class MissAppointment(
 
 object MissAppointments {
 
-  import scala.language.postfixOps
+  def all = repository.allMissAppointments
 
-  def all = repository allMissAppointments
+  def findBy(team: Team) = repository.allMissAppointments(team)
 
-  def findBy(team: Team) = repository allMissAppointments team
+  def findBy(user: User) = repository.allMissAppointments(user)
 
-  def findBy(user: User) = repository allMissAppointments user
+  def update(miss: MissAppointment) = repository.update(miss)
 
-  def update(miss: MissAppointment) = repository update miss
+}
+
+case class Worklog(val user: User, val date: Date, val worked: Float)
+
+object Worklogs {
+
+  def lastFrom(user: User) = repository.lastWorklogFrom(user)
 
 }

@@ -3,10 +3,12 @@ package bedex.view
 import scalafx.scene.control.cell.TextFieldTableCell
 import bedex.biz.MissAppointment
 import javafx.scene.control.Tooltip
+import javafx.scene.control.{ cell => jfxCell }
+import javafx.util.converter.DefaultStringConverter
 
 class MissAppointmentCell extends TextFieldTableCell(new DirtyTextFieldTableCell)
 
-private class DirtyTextFieldTableCell extends javafx.scene.control.cell.TextFieldTableCell[MissAppointment, String](new javafx.util.converter.DefaultStringConverter) {
+private class DirtyTextFieldTableCell extends jfxCell.TextFieldTableCell[MissAppointment, String](new DefaultStringConverter) {
 
   override def updateItem(item: String, empty: Boolean) = {
     val miss = getTableRow.getItem.asInstanceOf[MissAppointment]
@@ -37,4 +39,15 @@ private class DirtyTextFieldTableCell extends javafx.scene.control.cell.TextFiel
     }
 
   }
+}
+
+class StylishTableCell[T](val newStyles: String*) extends TextFieldTableCell(new JFXStylishTableCell[T](newStyles:_*))
+
+class JFXStylishTableCell[T](val newStyles: String*) extends jfxCell.TextFieldTableCell[T, String] {
+
+  override def updateItem(item: String, empty: Boolean) = {
+    getStyleClass.addAll(newStyles: _*)
+    super.updateItem(item, empty)
+  }
+
 }

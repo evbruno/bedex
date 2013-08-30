@@ -1,31 +1,34 @@
 package bedex.view
 
-import bedex.biz._
 import org.slf4j.LoggerFactory
-import java.text.SimpleDateFormat
-import javafx.event._
+
+import bedex.biz.MissAppointment
 import javafx.scene.control.Dialogs
-import javafx.scene.control.Tooltip
+import scalafx.Includes.eventClosureWrapper
+import scalafx.Includes.jfxStringProperty2sfx
+import scalafx.Includes.jfxTableViewSelectionModel2sfx
+import scalafx.Includes.tableColumnCellEditEventClosureWrapper
+import scalafx.beans.property.BooleanProperty
+import scalafx.beans.property.BooleanProperty.sfxBooleanProperty2jfx
 import scalafx.beans.property.ReadOnlyStringWrapper
-import scalafx.scene._
-import scalafx.Includes._
-import scalafx.geometry._
-import scalafx.stage.Stage._
-import scalafx.scene.control._
-import scalafx.scene.shape.Rectangle
-import scalafx.scene.control.TableColumn._
-import scalafx.scene.control.TableView._
+import scalafx.collections.ObservableBuffer
+import scalafx.geometry.HPos
+import scalafx.geometry.Insets
+import scalafx.geometry.Pos
+import scalafx.scene.Node
+import scalafx.scene.control.Button
+import scalafx.scene.control.ComboBox
+import scalafx.scene.control.TableColumn
+import scalafx.scene.control.TableColumn.CellEditEvent
+import scalafx.scene.control.TableColumn.sfxTableColumn2jfx
+import scalafx.scene.control.TableView
+import scalafx.scene.control.TableView.sfxTableView2jfx
 import scalafx.scene.control.Tooltip.stringToTooltip
 import scalafx.scene.layout.GridPane
 import scalafx.scene.text.Text
-import scalafx.stage.Stage
-import scalafx.scene.control.cell._
-import scalafx.scene.control._
-import scalafx.util.StringConverter
-import scalafx.util.converter.DefaultStringConverter
-import scalafx.collections.ObservableBuffer
+import scalafx.stage.Stage.sfxStage2jfx
 
-//FIXME 
+//FIXME
 // + provide some root Node (extension or wrapping)
 // + ...finish him !!!
 class MainView {
@@ -35,6 +38,8 @@ class MainView {
   private lazy val logger = LoggerFactory.getLogger(getClass)
 
   import javafx.{ event => evt }
+  import javafx.scene.{ input => ipt }
+  import javafx.beans.{ value => jval }
 
   val controller = new Controller
 
@@ -57,7 +62,7 @@ class MainView {
     prefWidth = COMBO_WIDTH
     selectionModel.value.selectFirst()
   }
-  
+
   val levelCombo = new ComboBox[Option[Int]] {
     items = ObservableBuffer(Seq(None, Some(0), Some(1), Some(2), Some(3)))
     converter = new SomeConverter("Lvl: ")
@@ -72,12 +77,6 @@ class MainView {
 
     logger.debug("Searchin for team = {}, user = {}, filter = {}, level = {}", team, user, filter, level)
 
-    /*table.items = filter match {
-      case FilterWithReason => controller.missApointments(team, user).filterNot(_.reason.value.isEmpty)
-      case FilterWithoutReason => controller.missApointments(team, user).filter(_.reason.value.isEmpty)
-      case _ => controller.missApointments(team, user)
-    }*/
-    
     table.items = controller.missApointments(team, user, level)
   }
 
@@ -85,7 +84,7 @@ class MainView {
     text = "Search"
     prefWidth = BUTTON_WIDTH
     defaultButton = true
-    tooltip = "search button: \n click here to search."
+    tooltip = "Search button: \n click here to search."
     onAction = onSearchAction
   }
 
@@ -98,7 +97,7 @@ class MainView {
     text = "Save"
     prefWidth = 100
     onAction = onSaveAction
-    disable <== when(controller.isDirty) choose true otherwise false
+    disable <== controller.isEmpty
   }
 
   def onCancelAction = {
@@ -119,7 +118,17 @@ class MainView {
   val cancelButton = new Button("Cancel") {
     prefWidth = 100
     onAction = onCancelAction
-    disable <== when(controller.isDirty) choose true otherwise false
+    disable <== saveButton.disable
+  }
+
+  def onWorklogAction = {
+    worklogDialogStage.show
+    updateWorklog()
+  }
+
+  val worklogButton = new Button("See worklog") {
+    onAction = onWorklogAction
+    disable <== tableRowHasSelection.not
   }
 
   val userCol = new TableColumn[MissAppointment, String] {
@@ -132,6 +141,7 @@ class MainView {
 
   val teamCol = new TableColumn[MissAppointment, String] {
     text = "Team"
+    resizable = false
     prefWidth = 80
     cellValueFactory = { e: MyColumnFeature => ReadOnlyStringWrapper(e.getValue.user.team.name) }
   }
@@ -143,13 +153,13 @@ class MainView {
     sortable = true
     cellValueFactory = (e: MyColumnFeature) => ReadOnlyStringWrapper(e.getValue.startDate)
   }
-  
+
   val endDateCol = new TableColumn[MissAppointment, String] {
-	  text = "End Dt"
-	  prefWidth = 70
-	  resizable = false
-	  sortable = true
-	  cellValueFactory = (e: MyColumnFeature) => ReadOnlyStringWrapper(e.getValue.endDate)
+    text = "End Dt"
+    prefWidth = 70
+    resizable = false
+    sortable = true
+    cellValueFactory = (e: MyColumnFeature) => ReadOnlyStringWrapper(e.getValue.endDate)
   }
 
   val logTypeCol = new TableColumn[MissAppointment, String] {
@@ -161,6 +171,7 @@ class MainView {
 
   val levelCol = new TableColumn[MissAppointment, String] {
     text = "Lvl"
+    cellFactory = _ => new StylishTableCell("centerCell")
     prefWidth = 40
     resizable = false
     sortable = true
@@ -168,7 +179,7 @@ class MainView {
   }
 
   val workedCol = new TableColumn[MissAppointment, String] {
-    text = "Worked"
+    text = "Worked (h)"
     prefWidth = 60
     resizable = false
     cellValueFactory = (e: MyColumnFeature) => ReadOnlyStringWrapper(e.getValue.worked)
@@ -195,7 +206,24 @@ class MainView {
     prefWidth = 720
     prefHeight = 400
     columns ++= List(userCol, teamCol, startDateCol, endDateCol, logTypeCol, levelCol, workedCol, reasonCol)
+    selectionModel.value.selectedItem.onChange {
+      updateWorklog()
+    }
   }
+
+  private lazy val tableRowHasSelection = new BooleanProperty { value = false }
+
+  def updateWorklog() {
+    val currentItem = table.selectionModel.value.getSelectedItem
+    tableRowHasSelection.set(currentItem != null)
+
+    if (worklogDialogStage.isShowing) {
+      val user = if (currentItem != null) currentItem.user else null
+      controller.lastWorklogsFrom(user)
+    }
+  }
+
+  private lazy val worklogDialogStage = new WorklogStage(controller.worklogsBuffer)
 
   def root: Node = {
     val grid = new GridPane {
@@ -210,7 +238,6 @@ class MainView {
 
     grid.add(teamsCombo, 0, 1)
     grid.add(usersCombo, 1, 1)
-    //grid.add(filterCombo, 2, 1)
     grid.add(levelCombo, 2, 1)
     grid.add(searchButton, 4, 1)
 
@@ -219,6 +246,7 @@ class MainView {
     grid.add(saveButton, 0, 22, 2, 1)
     GridPane setHalignment (saveButton, HPos.CENTER)
     grid.add(cancelButton, 3, 22)
+    grid.add(worklogButton, 4, 22)
 
     grid
   }

@@ -2,14 +2,13 @@ package bedex
 
 import scala.collection.Map
 import scala.util.Properties
-
 import org.slf4j.LoggerFactory
-
 import bedex.biz.Domain
 import bedex.biz.InMemory
 import bedex.biz.jdbc.H2Repository
 import bedex.biz.jdbc.OracleRepository
 import scalafx.application.JFXApp.Parameters
+import scalafx.application.JFXApp
 
 object Bootstrap {
 
@@ -32,9 +31,20 @@ class Bootstrap private (params: Parameters) {
     Properties.javaVmVersion,
     Properties.javaVendor)
 
+  // init
+
   if (params.named.contains(DB_URL)) parseNamedParams(params)
   else if (dbFileExists) parseDBFile
   else inMemory
+
+  initFXStuff
+
+
+  // defs
+
+  def initFXStuff {
+    JFXApp.AUTO_SHOW = false
+  }
 
   def shutdown() = {
     Domain.repository.shuwtdown

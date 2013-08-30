@@ -2,10 +2,7 @@ package bedex.biz.env
 
 import java.util.Date
 import scala.io.Source
-import bedex.biz.MissAppointment
-import bedex.biz.Team
-import bedex.biz.User
-import bedex.biz.MissAppointment
+import bedex.biz._
 import java.text.SimpleDateFormat
 import java.io.File
 import org.slf4j.LoggerFactory
@@ -17,6 +14,7 @@ object Environment1 {
   def teamList: List[Team] = teams.toList
   def userList: List[User] = users.toList
   def missAppointmentList: List[MissAppointment] = logs.toList
+  def worklogList: List[Worklog] = worklogs.toList
 
   private def linesFor(source: String): Array[Array[String]] = {
     val inputStream = getClass.getResourceAsStream("/" + source)
@@ -38,19 +36,29 @@ object Environment1 {
       user
     }
 
+  private lazy val dateFormatter = new SimpleDateFormat("dd-MM-yy")
+
   private lazy val logs: Array[MissAppointment] =
     for (line <- linesFor("export_log.dsv")) yield {
-      val user: User = users.find(_.name == line(0)).get
+      val user = users.find(_.name == line(0)).get
       val levelLog = line(1).toInt
       val typeLog = Symbol(line(2))
-      val worked: Float = line(3).toFloat
-      val startDate: Date = new SimpleDateFormat("dd-MM-yy").parse(line(4))
-      val endDate: Date = new SimpleDateFormat("dd-MM-yy").parse(line(5))
-      val reason: String = if (line.length > 8) line(8) else ""
+      val worked = line(3).toFloat
+      val startDate = dateFormatter.parse(line(4))
+      val endDate = dateFormatter.parse(line(5))
+      val reason = if (line.length > 8) line(8) else ""
 
       val miss = MissAppointment(user, startDate, endDate, worked, typeLog, reason, levelLog)
       logger.debug("Log loaded: {} ", miss)
       miss
     }
 
+  private lazy val worklogs: Array[Worklog] =
+    for (line <- linesFor("export_worklog.dsv")) yield {
+      val user = users.find(_.name == line(0)).get
+      val date = dateFormatter.parse(line(1))
+      val worked = line(2).toFloat
+
+      Worklog(user, date, worked)
+    }
 }

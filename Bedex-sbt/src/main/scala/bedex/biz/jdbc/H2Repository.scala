@@ -20,6 +20,8 @@ object H2Repository extends Repository {
 
   def allMissAppointments: List[MissAppointment] = 
     query(defaultSelectMissAppointmentsSQL)(incarnateMissAppointment)
+    
+  def lastWorklogFrom(user: User) = null
 
   override def update(miss: MissAppointment): Unit = {
     executeUpdate(defaultUpdateMissAppointmentSQL) {
