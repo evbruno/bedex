@@ -81,10 +81,7 @@ package object jdbc {
     new ResultSetIterator(rs).map(functor).toList
   }
 
-   def preparedQuery[T](sql: String)
-   		(prepare: PreparedStatement => Unit)
-   		(functor: ResultSet => T)
-  		(implicit connection: Connection): List[T] = {
+  def preparedQuery[T](sql: String)(prepare: PreparedStatement => Unit)(functor: ResultSet => T)(implicit connection: Connection): List[T] = {
 
     val stmt = connection.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY)
 
@@ -112,7 +109,10 @@ package object jdbc {
     stmt.setString(5, miss.user.name)
   }
 
-  implicit def nullStringToBlank(in: String) = new StringOps(in)
+  def defaultLastWorklogFrom(user: User)(implicit connection: Connection) =
+		  preparedQuery(defaultSelectWorklogSummarySQL)(_.setString(1, user.name))(incarnateWorklog)
+
+  private implicit def nullStringToBlank(in: String) = new StringOps(in)
 
   // biz conversion
 
@@ -129,6 +129,5 @@ package object jdbc {
     rs.getString("l_reason").nullToEmpty,
     rs.getInt("l_level_log"))
 
-    def incarnateWorklog(rs: ResultSet) =
-      Worklog(incarnateUser(rs), rs.getDate("worked_date"), rs.getFloat("worked_time"))
+  def incarnateWorklog(rs: ResultSet) = Worklog(incarnateUser(rs), rs.getDate("worked_date"), rs.getFloat("worked_time"))
 }

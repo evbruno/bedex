@@ -61,11 +61,11 @@ class Controller {
 
   lazy val worklogsBuffer = ObservableBuffer(ArrayBuffer[Worklog]())
 
-  def lastWorklogsFrom(user: User) {
+  def lastWorklogsFrom(user: Option[User]) {
     if (worklogsBuffer.isEmpty) {
       worklogsBuffer.appendAll(Worklogs.lastFrom(user))
       logger.debug("Searching for last worklogs from {} => {} found", user, worklogsBuffer.size)
-    } else if (worklogsBuffer.head.user != user) {
+    } else if (worklogsBuffer.head.user != user.getOrElse(null)) {
       worklogsBuffer.clear
       worklogsBuffer.appendAll(Worklogs.lastFrom(user))
       logger.debug("RE-Searching for last worklogs from {} => {} found", user, worklogsBuffer.size)

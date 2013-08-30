@@ -218,7 +218,7 @@ class MainView {
     tableRowHasSelection.set(currentItem != null)
 
     if (worklogDialogStage.isShowing) {
-      val user = if (currentItem != null) currentItem.user else null
+      val user = if (currentItem != null) Some(currentItem.user) else None
       controller.lastWorklogsFrom(user)
     }
   }

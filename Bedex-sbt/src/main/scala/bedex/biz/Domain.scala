@@ -122,6 +122,9 @@ case class Worklog(val user: User, val date: Date, val worked: Float)
 
 object Worklogs {
 
-  def lastFrom(user: User) = repository.lastWorklogFrom(user)
+  def lastFrom(user: Option[User]) = user match {
+    case Some(u) => repository.lastWorklogFrom(u)
+    case _ => List()
+  }
 
 }
