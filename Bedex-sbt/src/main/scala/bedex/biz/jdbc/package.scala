@@ -67,7 +67,7 @@ package object jdbc {
     				t.coach t_coach,
     				t.manager t_manager
 			FROM WORKLOG_SUMMARY w, USER_TEAM  u, TEAM t
-			WHERE u.team = t.name AND w.user_name = u.user_name
+			WHERE u.team = t.name AND w.user_name = u.user_name AND u.end_date IS NULL
     			AND u.user_name = ?
 			ORDER BY w.worked_date ASC"""
 
