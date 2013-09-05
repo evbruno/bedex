@@ -47,10 +47,14 @@ If you choose to run from command line:
 
 ### TODO
 
-+ vacations
-+ show work log (last 7 days)
-+ better filters (by date, by lvl, etc..)
-+ styling
-+ miss appointments pre-notification
-+ ProGuarding
-
+* vacations
+* ~~show work log~~
+  * caching
+* missappointment filters: 
+  * by date
+  * ~~by level~~
+  * ~~by team~~
+  * ~~by user name~~
+* styling
+* miss appointments pre-notification
+* ProGuarding
