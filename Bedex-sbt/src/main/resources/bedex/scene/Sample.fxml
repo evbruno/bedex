@@ -9,7 +9,7 @@
 <AnchorPane cache="true" prefHeight="392.0" prefWidth="405.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bedex.scene.Controller">
   <!-- TODO Add Nodes -->
   <children>
-    <Button fx:id="myButton2" layoutX="161.0" layoutY="196.0" mnemonicParsing="false" onAction="#onMouseAction" text="Click me!" />
+    <Button fx:id="myButton2" layoutX="161.0" layoutY="196.0" mnemonicParsing="false" onAction="#onMouseAction" text="%clickButton" />
     <Label fx:id="myLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" prefWidth="377.0" text="&lt; not clicked &gt;" textAlignment="CENTER">
       <font>
         <Font name="System Bold" size="13.0" />

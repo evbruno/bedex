@@ -7,6 +7,7 @@ import scalafx.Includes._
 import scalafx.application.JFXApp
 import scalafx.application.JFXApp.PrimaryStage
 import scalafx.scene.Scene
+import java.util.ResourceBundle
 
 object Main extends JFXApp {
 
@@ -19,7 +20,7 @@ object Main extends JFXApp {
   // We load here FXML content using JavaFX directly.
   // It is important to provide type for the element loaded,
   // though it can be a generic, here use `javafx.scene.parent`.
-  val root: jfxs.Parent = jfxf.FXMLLoader.load(resource)
+  val root: jfxs.Parent = jfxf.FXMLLoader.load(resource, ResourceBundle.getBundle("Messages"))
 
   stage = new PrimaryStage() {
     title = "FXML Sample Demo"
