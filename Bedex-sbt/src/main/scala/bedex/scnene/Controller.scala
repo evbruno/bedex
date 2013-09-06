@@ -1,4 +1,4 @@
-package bedex.scnene
+package bedex.scene
 
 import java.net.URL
 import java.util

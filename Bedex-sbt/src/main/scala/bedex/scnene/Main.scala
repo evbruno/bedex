@@ -1,8 +1,8 @@
-package bedex.scnene
+package bedex.scene
 
 import java.io.IOException
-import javafx.{fxml => jfxf}
-import javafx.{scene => jfxs}
+import javafx.{ fxml => jfxf }
+import javafx.{ scene => jfxs }
 import scalafx.Includes._
 import scalafx.application.JFXApp
 import scalafx.application.JFXApp.PrimaryStage
@@ -10,10 +10,10 @@ import scalafx.scene.Scene
 
 object Main extends JFXApp {
 
-  val resource = getClass.getResource("Sample.fxml")
-  if (resource == null) {
+  var resource = getClass.getResource("Sample.fxml")
+
+  if (resource == null)
     throw new IOException("Cannot load resource: Sample.fxml")
-  }
 
   // NOTE: ScalaFX doe not yet provide a wrapper fro FXMLLoader (2012.11.12)
   // We load here FXML content using JavaFX directly.
