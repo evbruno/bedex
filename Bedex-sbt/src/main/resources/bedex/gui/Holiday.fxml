@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?scenebuilder-preview-i18n-resource ../../Messages_pt_BR.properties?>
+
+<fx:root type="BorderPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bedex.gui.HolidayController">
+  <center>
+    <ScrollPane prefHeight="453.0" prefWidth="447.0">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="431.0" prefWidth="421.0">
+          <children>
+            <Label layoutX="14.0" layoutY="14.0" prefWidth="393.0" styleClass="textHeader" text="%holiday.gui.header" />
+            <Label layoutX="10.0" layoutY="45.0" prefHeight="21.0" prefWidth="117.0" styleClass="formLabel" text="%holiday.gui.description" />
+            <TextField fx:id="descriptionText" layoutX="131.0" layoutY="45.0" prefWidth="200.0" promptText="%holiday.gui.description" />
+            <Label layoutX="14.0" layoutY="76.0" prefHeight="21.0" prefWidth="117.0" styleClass="formLabel" text="%holiday.gui.date" />
+            <TextField fx:id="dateText" layoutX="131.0" layoutY="76.0" prefWidth="117.0" />
+            <Separator layoutX="12.0" layoutY="146.0" prefWidth="319.0" />
+            <Button fx:id="saveButton" defaultButton="true" layoutX="127.0" layoutY="113.0" mnemonicParsing="false" onAction="#onSaveAction" text="%core.gui.save" />
+            <Button fx:id="cancelButton" cancelButton="true" layoutX="208.0" layoutY="113.0" mnemonicParsing="false" onAction="#onCancelAction" text="%core.gui.cancel" />
+            <TableView fx:id="holidaysTable" layoutX="14.0" layoutY="160.0" prefHeight="225.0" prefWidth="317.0">
+              <columns>
+                <TableColumn editable="false" prefWidth="75.0" resizable="false" text="%core.date.text" fx:id="dateColumn">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="date" />
+                  </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="241.0" resizable="false" text="%holiday.gui.description" fx:id="descriptionColumn">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="description" />
+                  </cellValueFactory>
+                </TableColumn>
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+      </content>
+    </ScrollPane>
+  </center>
+  <stylesheets>
+    <URL value="@../../bedex.css" />
+  </stylesheets>
+</fx:root>

@@ -9,3 +9,12 @@
 .centerCell {
 	-fx-alignment: baseline-center;
 }
+
+.textHeader {
+	-fx-font-size: 20.0px;
+}
+
+.formLabel {
+	-fx-text-fill: #333333;
+	-fx-alignment: center-right;
+}
