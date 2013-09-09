@@ -2,54 +2,55 @@ package bedex.gui
 
 import java.net.URL
 import java.util
-import javafx.{ event => jfxe }
-import javafx.{ fxml => jfxf }
-import javafx.{ util => jfxu }
-import javafx.scene.{ control => ctrl }
-import javafx.collections.ObservableList
-import javafx.beans.property.SimpleListProperty
-import javafx.collections.FXCollections
 import java.util.List
-import javafx.beans.property.SimpleIntegerProperty
+
 import javafx.beans.property.SimpleStringProperty
+import javafx.collections.FXCollections
+import javafx.event.ActionEvent
+import javafx.fxml.FXML
+import javafx.fxml.Initializable
+import javafx.scene.control.Button
+import javafx.scene.control.TableColumn
+import javafx.scene.control.TableView
+import javafx.scene.control.TextField
 
 // only with JavaFX
-class HolidayController extends jfxf.Initializable {
+class HolidayController extends Initializable {
 
-  @jfxf.FXML
-  private var saveButton: ctrl.Button = _
+  @FXML
+  private var saveButton: Button = _
 
-  @jfxf.FXML
-  private var cancelButton: ctrl.Button = _
+  @FXML
+  private var cancelButton: Button = _
 
-  @jfxf.FXML
-  private var descriptionText: ctrl.TextField = _
+  @FXML
+  private var descriptionText: TextField = _
 
-  @jfxf.FXML
-  private var dateText: ctrl.TextField = _
+  @FXML
+  private var dateText: TextField = _
 
-  @jfxf.FXML
-  private var holidaysTable: ctrl.TableView[Bean] = _
+  @FXML
+  private var holidaysTable: TableView[Bean] = _
 
-  @jfxf.FXML
-  private var dateColumn: ctrl.TableColumn[Bean, String] = _
+  @FXML
+  private var dateColumn: TableColumn[Bean, String] = _
 
-  @jfxf.FXML
-  private var descriptionColumn: ctrl.TableColumn[Bean, String] = _
+  @FXML
+  private var descriptionColumn: TableColumn[Bean, String] = _
 
   private var count = 0
 
   private val source = FXCollections.observableArrayList(randomStuff)
 
-  @jfxf.FXML
-  private def onSaveAction(event: jfxe.ActionEvent) {
+  @FXML
+  private def onSaveAction(event: ActionEvent) {
     count = count + 1
     println(s"Count = ${count}")
     source.add(0, Bean(count + 50))
   }
 
-  @jfxf.FXML
-  private def onCancelAction(event: jfxe.ActionEvent) {
+  @FXML
+  private def onCancelAction(event: ActionEvent) {
     source.remove(count)
     count = 0
     println(s"Count = ${count}")
@@ -61,7 +62,6 @@ class HolidayController extends jfxf.Initializable {
   }
 
   private def randomStuff: List[Bean] = collection.JavaConversions.seqAsJavaList(Range(1, 50).map(Bean))
-
 
 }
 
