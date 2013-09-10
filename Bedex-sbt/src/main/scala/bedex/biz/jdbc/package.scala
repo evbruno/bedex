@@ -25,41 +25,46 @@ package object jdbc {
   // constants
 
   lazy val defaultSelectTeamSQL =
-    """SELECT name t_name, coach t_coach, manager t_manager 
+    """SELECT name t_name, coach t_coach, manager t_manager
     		FROM TEAM order by t_name ASC"""
 
   lazy val defaultSelectUserSQL =
-    """SELECT u.user_name u_user_name, u.team t_name, t.coach t_coach, t.manager t_manager
+    """SELECT u.user_name u_user_name,
+    				u.team t_name,
+    				t.coach t_coach,
+    				t.manager t_manager,
+    				u.end_date u_end_date
 			FROM USER_TEAM  u, TEAM t
-			WHERE u.team = t.name
+			WHERE u.team = t.name AND u.end_date is null
     		ORDER BY u_user_name"""
 
   lazy val defaultSelectMissAppointmentsSQL =
-    """SELECT m.start_date l_start_date, 
-    				m.end_date l_end_date, 
-    				m.type_log l_type_log, 
-    				m.level_log l_level_log, 
-    				m.worked l_worked, 
-    				m.expected l_expected, 
-    				m.reason l_reason, 
-    				u.user_name u_user_name, 
-    				u.team t_name, 
+    """SELECT m.start_date l_start_date,
+    				m.end_date l_end_date,
+    				m.type_log l_type_log,
+    				m.level_log l_level_log,
+    				m.worked l_worked,
+    				m.expected l_expected,
+    				m.reason l_reason,
+    				u.user_name u_user_name,
+    				u.team t_name,
     				t.coach t_coach,
-    				t.manager t_manager
+    				t.manager t_manager,
+            		u.end_date u_end_date
 			FROM LOGMISSAPPOINTMENT m, USER_TEAM  u, TEAM t
-			WHERE u.team = t.name AND m.user_name = u.user_name 
+			WHERE u.team = t.name AND m.user_name = u.user_name AND u.end_date is null
 			ORDER BY m.start_date DESC"""
 
-    
+
    lazy val defaultUpdateMissAppointmentSQL =
     """UPDATE LOGMISSAPPOINTMENT l
 			SET l.reason = ?
-			WHERE 
+			WHERE
 			  l.type_log = ?
 			  AND l.level_log = ?
 			  AND l.end_date = ?
 			  AND l.user_name = ?"""
-     
+
   // jdbc
 
   def query[T](sql: String)(functor: ResultSet => T)(implicit connection: Connection): List[T] = {
