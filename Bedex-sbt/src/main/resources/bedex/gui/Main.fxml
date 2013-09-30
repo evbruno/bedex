@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?scenebuilder-preview-i18n-resource ../../Messages_pt_BR.properties?>
+
+<BorderPane prefHeight="555.0" prefWidth="770.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bedex.gui.MainController">
+  <!-- TODO Add Nodes -->
+  <bottom>
+    <HBox fx:id="statusBarBox" prefHeight="24.0" prefWidth="771.0">
+      <children>
+        <Label text="&lt;&lt; status bar &gt;&gt;" />
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <TabPane fx:id="mainContentTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab fx:id="holidayTab" text="%holiday.gui.header">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab fx:id="missAppointmentTab" text="%missAppointment.gui.header">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab fx:id="vacationTab" text="%vacation.gui.header">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </center>
+  <top>
+    <HBox prefHeight="24.0" prefWidth="771.0" />
+  </top>
+</BorderPane>
