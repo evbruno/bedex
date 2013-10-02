@@ -5,6 +5,7 @@ import javafx.scene.control._
 import java.net.URL
 import javafx.scene.layout._
 import javafx.scene.Node
+import bedex.view.MainView
 
 class MainController extends Initializable {
 
@@ -26,6 +27,15 @@ class MainController extends Initializable {
 
   def initialize(url: URL, rb: java.util.ResourceBundle) {
     holidayTab.setContent(tabContent("Holiday"))
+    vacationTab.setContent(tabContent("Vacation"))
+    missAppointmentTab.setContent(new MainView().root)
+    
+    addStatus("Loaded")
+  }
+  
+  private def addStatus(msg: String) = {
+    val label = new Label(msg)
+    statusBarBox.getChildren.add(label)
   }
 
   private def tabContent(resourceName: String) : Node = {

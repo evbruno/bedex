@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-preview-i18n-resource ../../Messages_pt_BR.properties?>
+
+<AnchorPane focusTraversable="true" prefHeight="469.0000999999975" prefWidth="739.999755859375" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label layoutX="14.0" layoutY="14.0" prefWidth="393.0" styleClass="textHeader" text="%vacation.gui.header" />
+    <ComboBox layoutX="176.0" layoutY="48.0" prefWidth="194.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label layoutX="379.0" layoutY="48.0" prefHeight="21.0" prefWidth="90.0" styleClass="formLabel" text="%vacation.gui.reason" />
+    <TextField id="descriptionText" layoutX="480.0" layoutY="48.0" prefWidth="246.0" promptText="%vacation.gui.defaultReason">
+      <tooltip>
+        <Tooltip text="vacation.gui.tooltipReason" />
+      </tooltip>
+    </TextField>
+    <Label layoutX="74.0" layoutY="81.0" prefHeight="21.0" prefWidth="161.0" styleClass="formLabel" text="%vacation.gui.startDate" />
+    <TextField id="dateText" layoutX="253.0" layoutY="81.0" prefWidth="117.0" />
+    <Label layoutX="417.0" layoutY="80.0" prefHeight="21.0" prefWidth="174.0" styleClass="formLabel" text="%vacation.gui.endDate" />
+    <TextField id="dateText" layoutX="609.0" layoutY="80.0" prefWidth="117.0" />
+    <Label layoutX="19.0" layoutY="48.0" prefHeight="21.0" prefWidth="117.0" styleClass="formLabel" text="%core.username.text" />
+    <Separator layoutX="14.0" layoutY="115.0" prefWidth="712.0" />
+    <TableView layoutX="14.0" layoutY="126.0" prefHeight="329.0001220703125" prefWidth="712.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="Column X" />
+        <TableColumn prefWidth="75.0" text="Column X" />
+      </columns>
+    </TableView>
+    <Button defaultButton="true" layoutX="663.0" layoutY="14.0" mnemonicParsing="false" text="%core.gui.save" />
+    <Button cancelButton="true" layoutX="563.0" layoutY="14.0" mnemonicParsing="false" text="%core.gui.cancel" />
+  </children>
+  <stylesheets>
+    <URL value="@../../bedex.css" />
+  </stylesheets>
+</AnchorPane>
