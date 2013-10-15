@@ -18,12 +18,12 @@
   <center>
     <TabPane fx:id="mainContentTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
-        <Tab fx:id="holidayTab" text="%holiday.gui.header">
+        <Tab fx:id="missAppointmentTab" text="%missAppointment.gui.header">
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
           </content>
         </Tab>
-        <Tab fx:id="missAppointmentTab" text="%missAppointment.gui.header">
+        <Tab fx:id="holidayTab" text="%holiday.gui.header">
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
           </content>
@@ -33,7 +33,7 @@
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
           </content>
         </Tab>
-        <Tab fx:id="preNotificationTab" text="%preNotification.gui.header">
+        <Tab fx:id="preNotificationTab" disable="true" text="%preNotification.gui.header">
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
           </content>

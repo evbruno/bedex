@@ -62,4 +62,12 @@ object OracleRepository extends Repository {
     logger.info("Desconecting from {}", url)
     conn.close
   }
+  
+  def allHolidays : List[Holiday] = ???
+  
+  def update(hol: Holiday) = ???
+   
+  def insert(hol: Holiday) = ???
+  
+  def delete(hol: Holiday) = ???
 }

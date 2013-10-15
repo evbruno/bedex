@@ -31,7 +31,7 @@ class MainController extends Initializable {
     missAppointmentTab.setContent(new MainView().root)
     holidayTab.setContent(tabContent("Holiday"))
     vacationTab.setContent(tabContent("Vacation"))
-    preNotificationTab.setContent(tabContent("PreNotification"))
+    //preNotificationTab.setContent(tabContent("PreNotification"))
 
     addStatus("Loaded")
   }

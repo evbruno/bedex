@@ -1,11 +1,12 @@
 package bedex.gui
 
 import java.net.URL
+import java.text.SimpleDateFormat
 import java.util
-import java.util.List
-
+import bedex.biz.Holiday
 import javafx.beans.property.SimpleStringProperty
 import javafx.collections.FXCollections
+import javafx.collections.ObservableList
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
@@ -13,9 +14,11 @@ import javafx.scene.control.Button
 import javafx.scene.control.TableColumn
 import javafx.scene.control.TableView
 import javafx.scene.control.TextField
+import javafx.scene.input.MouseEvent
+import bedex.core.Logger
 
 // only with JavaFX
-class HolidayController extends Initializable {
+class HolidayController extends Initializable with Logger {
 
   @FXML
   private var saveButton: Button = _
@@ -24,53 +27,97 @@ class HolidayController extends Initializable {
   private var cancelButton: Button = _
 
   @FXML
+  private var deleteButton: Button = _
+
+  @FXML
   private var descriptionText: TextField = _
 
   @FXML
   private var dateText: TextField = _
 
   @FXML
-  private var holidaysTable: TableView[Bean] = _
+  private var holidaysTable: TableView[HolidayProperties] = _
 
   @FXML
-  private var dateColumn: TableColumn[Bean, String] = _
+  private var dateColumn: TableColumn[HolidayProperties, String] = _
 
   @FXML
-  private var descriptionColumn: TableColumn[Bean, String] = _
+  private var descriptionColumn: TableColumn[Holiday, String] = _
 
-  private var count = 0
+  private lazy val source: ObservableList[HolidayProperties] = FXCollections.observableArrayList()
 
-  private val source = FXCollections.observableArrayList(randomStuff)
+  private var displayDateFormat: SimpleDateFormat = _
+  private var inputDateFormat: SimpleDateFormat = _
+
+  def initialize(url: URL, rb: util.ResourceBundle) {
+    reloadSource()
+    holidaysTable.setItems(source)
+
+    inputDateFormat = new SimpleDateFormat(rb.getString("core.date.shortFormat"))
+    displayDateFormat = new SimpleDateFormat(rb.getString("core.date.longFormat"))
+
+    deleteButton.disableProperty.bind(holidaysTable.getSelectionModel.selectedItemProperty.isNull)
+
+    saveButton.disableProperty.bind(
+      holidaysTable.getSelectionModel.selectedItemProperty.isNull
+        .and(descriptionText.textProperty.isEqualTo("")
+          .and(dateText.textProperty.isEqualTo(""))))
+  }
+
+  private def reloadSource() {
+    source.clear()
+    val list = Holiday.all.map(HolidayProperties).toList
+    source.addAll(FXCollections.observableArrayList(list: _*))
+  }
 
   @FXML
   private def onSaveAction(event: ActionEvent) {
-    count = count + 1
-    println(s"Count = ${count}")
-    source.add(0, Bean(count + 50))
+    println(s"Saving ")
+
+    val name = descriptionText.getText
+    val date = inputDateFormat.parse(dateText.getText)
+    val holiday = Holiday(name, date)
+
+    debug("Saving holiday = {} from name = {} and date = {}", holiday, name, date)
+    Holiday.insert(holiday)
+    
+    reloadSource()
+    clearForm()
   }
 
   @FXML
   private def onCancelAction(event: ActionEvent) {
-    source.remove(count)
-    count = 0
-    println(s"Count = ${count}")
+    debug("Canceling form")
+    clearForm()
   }
 
-  def initialize(url: URL, rb: util.ResourceBundle) {
-    holidaysTable.setItems(source)
-    println(s"Table items = ${source}")
+  @FXML
+  private def onDeleteAction(event: ActionEvent) {
+    val property = holidaysTable.getSelectionModel.getSelectedItem
+
+    debug("Deleting property = {}", property)
+    Holiday.delete(property.source)
+
+    reloadSource()
+    clearForm()
   }
 
-  private def randomStuff: List[Bean] = collection.JavaConversions.seqAsJavaList(Range(1, 50).map(Bean))
+  @FXML
+  private def onMouseClicked(event: MouseEvent) {
+    debug("Clicked on = {}", holidaysTable.getSelectionModel.getSelectedItem)
+  }
 
-}
+  private def clearForm(): Unit = {
+    holidaysTable.getSelectionModel.clearSelection()
+    descriptionText.setText("")
+    dateText.setText("")
+  }
 
-case class Bean(n: Int) {
+  case class HolidayProperties(val source: Holiday) {
 
-  private val numProp = new SimpleStringProperty(n.toString * 3)
-  private val charProp = new SimpleStringProperty((n + 64).toChar.toString)
+    def descriptionProperty = new SimpleStringProperty(source.name)
+    def dateProperty = new SimpleStringProperty(displayDateFormat.format(source.when))
 
-  def dateProperty = numProp
-  def descriptionProperty = charProp
+  }
 
 }

@@ -17,5 +17,17 @@ object InMemorySpikes extends App {
   val will = InMemory.allUsers.find(_.name == "willie.clumpsy").get
   println("--- worklogs ----")
   println(InMemory.lastWorklogFrom(will).mkString("\n"))
-
+  
+  println("--- Holidays ---")
+  println(InMemory.allHolidays.mkString("\n"))
+  
+  println("--- Holidays (++ Today) ---")
+  val today = Holiday("Today is the day", new java.util.Date)
+  InMemory.insert(today)
+  println(InMemory.allHolidays.mkString("\n"))
+  
+  println("--- Holidays (-- Today) ---")
+  InMemory.delete(today)
+  println(InMemory.allHolidays.mkString("\n"))
+  
 }

@@ -1,9 +1,10 @@
 package bedex.biz
 
-import bedex._
-import bedex.biz.env.Environment1
 import org.slf4j.LoggerFactory
-import Domain._
+
+import Domain.MissAppointmentOrdering
+import bedex.ShutdownAgent
+import bedex.biz.env.Environment1
 
 trait Repository extends ShutdownAgent {
 
@@ -25,6 +26,14 @@ trait Repository extends ShutdownAgent {
   }
 
   def lastWorklogFrom(user: User): List[Worklog]
+  
+  //
+  
+  def allHolidays : List[Holiday]
+  
+  def insert(hol: Holiday)
+  
+  def delete(hol: Holiday)
 
 }
 
@@ -41,5 +50,11 @@ object InMemory extends Repository {
   def lastWorklogFrom(user: User) = environment.worklogList.filter(_.user == user)
 
   def shutdown = logger.debug("Shutdown")
+  
+  def allHolidays : List[Holiday] = environment.allHolidays
+  
+  def insert(hol: Holiday) = environment.insert(hol)
+  
+  def delete(hol: Holiday) = environment.delete(hol)
 
 }

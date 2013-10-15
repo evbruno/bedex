@@ -6,6 +6,7 @@ import bedex.biz._
 import java.text.SimpleDateFormat
 import java.io.File
 import org.slf4j.LoggerFactory
+import scala.collection.mutable.Buffer
 
 object Environment1 {
 
@@ -15,6 +16,11 @@ object Environment1 {
   def userList: List[User] = users.toList
   def missAppointmentList: List[MissAppointment] = logs.toList
   def worklogList: List[Worklog] = worklogs.toList
+  
+  private val holidayBuffer : Buffer[Holiday] = holidays.toBuffer
+  def allHolidays : List[Holiday] = holidayBuffer.toList
+  def insert(hol: Holiday) = holidayBuffer += hol
+  def delete(hol: Holiday) = holidayBuffer -= hol
 
   private def linesFor(source: String): Array[Array[String]] = {
     val inputStream = getClass.getResourceAsStream("/" + source)
@@ -60,5 +66,12 @@ object Environment1 {
       val worked = line(2).toFloat
 
       Worklog(user, date, worked)
+    }
+
+  private lazy val holidays: Array[Holiday] =
+    for (line <- linesFor("export_holiday.dsv")) yield {
+      val name = line(1)
+      val date = dateFormatter.parse(line(0))
+      Holiday(name, date)
     }
 }
