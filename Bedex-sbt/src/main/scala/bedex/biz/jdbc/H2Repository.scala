@@ -45,4 +45,10 @@ object H2Repository extends Repository {
   
   def delete(hol: Holiday) = ???
 
+  def allVacations : List[Vacation] = ???
+  
+  def insert(vacation: Vacation) = ???
+
+  def delete(vacation: Vacation) = ???
+
 }

@@ -26,15 +26,20 @@ trait Repository extends ShutdownAgent {
   }
 
   def lastWorklogFrom(user: User): List[Worklog]
-  
+
   //
-  
-  def allHolidays : List[Holiday]
-  
+
+  def allHolidays: List[Holiday]
+
   def insert(hol: Holiday)
-  
+
   def delete(hol: Holiday)
 
+  def allVacations: List[Vacation]
+
+  def insert(vac: Vacation)
+
+  def delete(vac: Vacation)
 }
 
 object InMemory extends Repository {
@@ -49,12 +54,19 @@ object InMemory extends Repository {
 
   def lastWorklogFrom(user: User) = environment.worklogList.filter(_.user == user)
 
-  def shutdown = logger.debug("Shutdown")
-  
-  def allHolidays : List[Holiday] = environment.allHolidays
-  
+  def shutdown =
+    // println("shutdown")
+    logger.debug("Shutdown")
+
+  def allHolidays: List[Holiday] = environment.allHolidays
+
   def insert(hol: Holiday) = environment.insert(hol)
-  
+
   def delete(hol: Holiday) = environment.delete(hol)
 
+  def allVacations: List[Vacation] = environment.allVacations
+
+   def insert(vac: Vacation) = environment.insert(vac)
+
+  def delete(vac: Vacation) = environment.delete(vac)
 }

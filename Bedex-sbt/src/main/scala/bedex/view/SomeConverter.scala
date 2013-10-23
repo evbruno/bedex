@@ -12,3 +12,11 @@ class SomeConverter[T](prefix: String = "") extends StringConverter[Option[T]] {
   def fromString(obj: String) = throw new RuntimeException
 
 }
+
+class AnyConverter[T](to: T => String) extends StringConverter[T] {
+
+  def toString(obj: T) = to(obj)
+
+  def fromString(obj: String) = throw new RuntimeException
+
+}

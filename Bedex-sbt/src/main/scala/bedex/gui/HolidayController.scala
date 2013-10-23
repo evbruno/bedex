@@ -55,19 +55,12 @@ class HolidayController extends Initializable with Logger {
 
     inputDateFormat = new SimpleDateFormat(rb.getString("core.date.shortFormat"))
     displayDateFormat = new SimpleDateFormat(rb.getString("core.date.longFormat"))
-
-    deleteButton.disableProperty.bind(holidaysTable.getSelectionModel.selectedItemProperty.isNull)
-
-    saveButton.disableProperty.bind(
-      holidaysTable.getSelectionModel.selectedItemProperty.isNull
-        .and(descriptionText.textProperty.isEqualTo("")
-          .and(dateText.textProperty.isEqualTo(""))))
+    initBindings
   }
 
   private def reloadSource() {
     source.clear()
-    val list = Holiday.all.map(HolidayProperties).toList
-    source.addAll(FXCollections.observableArrayList(list: _*))
+    source.addAll(FXCollections.observableArrayList(HolidayProperties.toList: _*))
   }
 
   @FXML
@@ -80,7 +73,7 @@ class HolidayController extends Initializable with Logger {
 
     debug("Saving holiday = {} from name = {} and date = {}", holiday, name, date)
     Holiday.insert(holiday)
-    
+
     reloadSource()
     clearForm()
   }
@@ -118,6 +111,22 @@ class HolidayController extends Initializable with Logger {
     def descriptionProperty = new SimpleStringProperty(source.name)
     def dateProperty = new SimpleStringProperty(displayDateFormat.format(source.when))
 
+  }
+
+  object HolidayProperties {
+    def toList = Holiday.all.map(HolidayProperties(_))
+  }
+  
+  private def initBindings: Unit = {
+
+    deleteButton.disableProperty.bind(holidaysTable.getSelectionModel.selectedItemProperty.isNull)
+
+    saveButton.disableProperty.bind(
+      descriptionText.textProperty.isEqualTo("").or(dateText.textProperty.isEqualTo("")))
+
+    cancelButton.disableProperty.bind(deleteButton.disabledProperty
+      .and(
+        descriptionText.textProperty.isEqualTo("").and(dateText.textProperty.isEqualTo(""))))
   }
 
 }

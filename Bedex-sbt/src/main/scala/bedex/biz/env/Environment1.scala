@@ -7,20 +7,46 @@ import java.text.SimpleDateFormat
 import java.io.File
 import org.slf4j.LoggerFactory
 import scala.collection.mutable.Buffer
+import bedex.core.Logger
 
-object Environment1 {
+// FIXME define with override from Repository
+object Environment1 extends Logger {
 
-  private lazy val logger = LoggerFactory.getLogger(getClass)
+  // Repository API 
+
+  // readonly
 
   def teamList: List[Team] = teams.toList
+
   def userList: List[User] = users.toList
+
   def missAppointmentList: List[MissAppointment] = logs.toList
+
   def worklogList: List[Worklog] = worklogs.toList
-  
-  private val holidayBuffer : Buffer[Holiday] = holidays.toBuffer
-  def allHolidays : List[Holiday] = holidayBuffer.toList
+
+  // holliday
+
+  def allHolidays: List[Holiday] = holidayBuffer.toList
+
   def insert(hol: Holiday) = holidayBuffer += hol
+
   def delete(hol: Holiday) = holidayBuffer -= hol
+
+  // vacation
+
+  def allVacations: List[Vacation] = vacationBuffer.toList
+  
+  def insert(vacation: Vacation) = vacationBuffer += vacation
+  
+  def delete(vacation: Vacation) = vacationBuffer -= vacation
+
+  // private fields
+
+  private val holidayBuffer: Buffer[Holiday] = holidays.toBuffer
+
+  private val vacationBuffer: Buffer[Vacation] = vacations.toBuffer
+
+  // helpers
 
   private def linesFor(source: String): Array[Array[String]] = {
     val inputStream = getClass.getResourceAsStream("/" + source)
@@ -31,14 +57,14 @@ object Environment1 {
   private lazy val teams: Array[Team] =
     for (line <- linesFor("export_team.dsv")) yield {
       val team = Team(line(0), line(1))
-      logger.debug("Team loaded: {}", team)
+      debug("Team loaded: {}", team)
       team
     }
 
   private lazy val users: Array[User] =
     for (line <- linesFor("export_user_team.dsv")) yield {
       val user = User(line(0), teams.find(_.name == line(1)).get)
-      logger.debug("User loaded: {}", user)
+      //debug("User loaded: {}", user)
       user
     }
 
@@ -55,7 +81,7 @@ object Environment1 {
       val reason = if (line.length > 8) line(8) else ""
 
       val miss = MissAppointment(user, startDate, endDate, worked, typeLog, reason, levelLog)
-      logger.debug("Log loaded: {} ", miss)
+      //debug("Log loaded: {} ", miss)
       miss
     }
 
@@ -72,6 +98,21 @@ object Environment1 {
     for (line <- linesFor("export_holiday.dsv")) yield {
       val name = line(1)
       val date = dateFormatter.parse(line(0))
-      Holiday(name, date)
+
+      val holiday = Holiday(name, date)
+      debug("Holiday: {}", holiday)
+      holiday
+    }
+
+  private lazy val vacations: Array[Vacation] =
+    for (line <- linesFor("export_vacation.dsv")) yield {
+      val user = users.find(_.name == line(0)).get
+      val startDate = dateFormatter.parse(line(1))
+      val endDate = dateFormatter.parse(line(2))
+      val reason = line(3)
+
+      val vacation = Vacation(user, reason, startDate, endDate)
+      debug("Vacation: {}", vacation)
+      vacation
     }
 }
