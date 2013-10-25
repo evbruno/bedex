@@ -1,0 +1,14 @@
+<notifications>
+	<notification>
+		<user>john</user>
+		<reason>sick leave</reason>
+	</notification>
+	<notification>
+		<user>connor</user>
+		<reason>velociraptor attack</reason>
+	</notification>
+	<notification>
+		<user>john</user>
+		<reason>terminator chasing</reason>
+	</notification>
+</notifications>
