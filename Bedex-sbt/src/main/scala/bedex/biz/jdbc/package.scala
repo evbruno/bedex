@@ -71,6 +71,17 @@ package object jdbc {
     			AND u.user_name = ?
 			ORDER BY w.worked_date ASC"""
 
+  lazy val defaultSelectAllHolidaysSQL =
+    """SELECT day, name
+		FROM holiday
+		ORDER BY day DESC """
+
+  lazy val defaultDeleteHolidaySQL =
+    """DELETE FROM holiday WHERE name = ? AND day = ? """
+
+  lazy val defaultInsertHolidaySQL =
+    """INSERT INTO HOLIDAY (name, day) VALUES (?, ?)"""
+
   // jdbc
 
   def query[T](sql: String)(functor: ResultSet => T)(implicit connection: Connection): List[T] = {
@@ -110,7 +121,7 @@ package object jdbc {
   }
 
   def defaultLastWorklogFrom(user: User)(implicit connection: Connection) =
-		  preparedQuery(defaultSelectWorklogSummarySQL)(_.setString(1, user.name))(incarnateWorklog)
+    preparedQuery(defaultSelectWorklogSummarySQL)(_.setString(1, user.name))(incarnateWorklog)
 
   private implicit def nullStringToBlank(in: String) = new StringOps(in)
 
@@ -130,4 +141,6 @@ package object jdbc {
     rs.getInt("l_level_log"))
 
   def incarnateWorklog(rs: ResultSet) = Worklog(incarnateUser(rs), rs.getDate("worked_date"), rs.getFloat("worked_time"))
+
+  def incarnateHoliday(rs: ResultSet) = Holiday(rs.getString("name"), rs.getDate("day"))
 }

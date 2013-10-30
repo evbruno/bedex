@@ -14,6 +14,7 @@ object H2Spikes extends App {
   val url = "jdbc:h2:~/test_env"
 
   implicit val conn = DriverManager.getConnection(url)
+  conn.setAutoCommit(true)
 
   try {
     // CREATE TABLES
@@ -50,12 +51,18 @@ object H2Spikes extends App {
 			REASON VARCHAR(1000)
    ) """)
 
-   executeSql("""
+    executeSql("""
     	CREATE TABLE WORKLOG_SUMMARY (
 		    USER_NAME VARCHAR(50),
 		    WORKED_DATE DATE,
 			WORKED_TIME NUMBER
    ) """)
+
+    executeSql("""
+	    CREATE TABLE HOLIDAY (
+		   DAY DATE NOT NULL, 
+		   NAME VARCHAR(50) NOT NULL, 
+	) """)
 
     // INSERTS
 
@@ -85,11 +92,20 @@ object H2Spikes extends App {
     println("--------- Inserting Worklogs")
 
     val logsSql = for (worklog <- Environment1.worklogList)
-    	yield """INSERT INTO WORKLOG_SUMMARY (user_name, worked_date, worked_time)
+      yield """INSERT INTO WORKLOG_SUMMARY (user_name, worked_date, worked_time)
     	VALUES ('%s', '%s', '%s')"""
-    	.format(worklog.user.name, toS(worklog.date), worklog.worked)
+      .format(worklog.user.name, toS(worklog.date), worklog.worked)
 
-    	executeBatchSql(logsSql)
+    executeBatchSql(logsSql)
+    
+    println("--------- Inserting Holidays")
+    
+    val logsHol = for (worklog <- Environment1.allHolidays)
+    	yield """INSERT INTO HOLIDAY (name, day)
+    	VALUES ('%s', '%s')"""
+    	.format(worklog.name.replaceAll("'", ""), toS(worklog.when))
+    	
+    	executeBatchSql(logsHol)
 
   } finally {
     conn.close
@@ -99,7 +115,7 @@ object H2Spikes extends App {
 
 object Helper {
 
-  implicit def toS(date: java.util.Date): String = new java.text.SimpleDateFormat("YYYY-MM-dd").format(date)
+  def toS(date: java.util.Date): String = new java.text.SimpleDateFormat("YYYY-MM-dd").format(date)
 
   def executeBatchSql(sqls: List[String])(implicit connection: Connection) = {
     val statement = connection.createStatement
@@ -109,7 +125,7 @@ object Helper {
       println(">> Running dml: " + sql)
     }
 
-    statement executeBatch
+    statement.executeBatch()
 
   }
 

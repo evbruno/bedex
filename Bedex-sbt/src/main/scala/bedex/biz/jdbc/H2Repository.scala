@@ -36,17 +36,22 @@ object H2Repository extends Repository {
     logger.info("Desconecting from {}", url)
     conn.close
   }
-  
-  def allHolidays : List[Holiday] = ???
-  
-  def update(hol: Holiday) = ???
-   
-  def insert(hol: Holiday) = ???
-  
-  def delete(hol: Holiday) = ???
 
-  def allVacations : List[Vacation] = ???
-  
+  // default JDBC
+
+  def allHolidays: List[Holiday] = query(defaultSelectAllHolidaysSQL)(incarnateHoliday)
+
+  private def holidayStmt(hol: Holiday, rs: PreparedStatement) {
+    rs.setString(1, hol.name)
+    rs.setDate(2, new java.sql.Date(hol.when.getTime))
+  }
+
+  def delete(hol: Holiday) = executeUpdate(defaultDeleteHolidaySQL) (holidayStmt(hol, _))
+
+  def insert(hol: Holiday) = executeUpdate(defaultInsertHolidaySQL)(holidayStmt(hol, _))
+
+  def allVacations: List[Vacation] = ???
+
   def insert(vacation: Vacation) = ???
 
   def delete(vacation: Vacation) = ???
