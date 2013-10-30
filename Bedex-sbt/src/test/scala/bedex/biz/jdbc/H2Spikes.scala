@@ -19,50 +19,57 @@ object H2Spikes extends App {
   try {
     // CREATE TABLES
 
-    executeSql("""
-      create table TEAM (
-    		name VARCHAR(50),
-    		coach VARCHAR(50),
-    		manager VARCHAR(50)
-    	)
-        """)
-
-    executeSql("""
-        create table USER_TEAM (
-    		user_name VARCHAR(50),
-    		team VARCHAR(50),
-    		end_date DATE
-        )
-        """)
-
-    executeSql("""
-    	CREATE TABLE LOGMISSAPPOINTMENT (
-    		USER_NAME VARCHAR(50),
-			COACH VARCHAR(50),
-			MANAGER VARCHAR(50),
-			START_DATE DATE,
-			END_DATE DATE,
-			TYPE_LOG VARCHAR(5),
-			LEVEL_LOG NUMBER,
-			WORKED NUMBER,
-			EXPECTED NUMBER,
-			MSG VARCHAR(1000),
-			MSGTIME DATE,
-			REASON VARCHAR(1000)
-   ) """)
-
-    executeSql("""
-    	CREATE TABLE WORKLOG_SUMMARY (
-		    USER_NAME VARCHAR(50),
-		    WORKED_DATE DATE,
-			WORKED_TIME NUMBER
-   ) """)
-
-    executeSql("""
-	    CREATE TABLE HOLIDAY (
-		   DAY DATE NOT NULL, 
-		   NAME VARCHAR(50) NOT NULL, 
-	) """)
+//    executeSql("""
+//      create table TEAM (
+//    		name VARCHAR(50),
+//    		coach VARCHAR(50),
+//    		manager VARCHAR(50)
+//    	)
+//        """)
+//
+//    executeSql("""
+//        create table USER_TEAM (
+//    		user_name VARCHAR(50),
+//    		team VARCHAR(50),
+//    		end_date DATE
+//        )
+//        """)
+//
+//    executeSql("""
+//    	CREATE TABLE LOGMISSAPPOINTMENT (
+//    		USER_NAME VARCHAR(50),
+//			COACH VARCHAR(50),
+//			MANAGER VARCHAR(50),
+//			START_DATE DATE,
+//			END_DATE DATE,
+//			TYPE_LOG VARCHAR(5),
+//			LEVEL_LOG NUMBER,
+//			WORKED NUMBER,
+//			EXPECTED NUMBER,
+//			MSG VARCHAR(1000),
+//			MSGTIME DATE,
+//			REASON VARCHAR(1000)
+//   ) """)
+//
+//    executeSql("""
+//    	CREATE TABLE WORKLOG_SUMMARY (
+//		    USER_NAME VARCHAR(50),
+//		    WORKED_DATE DATE,
+//			WORKED_TIME NUMBER
+//   ) """)
+//
+//    executeSql("""
+//	    CREATE TABLE HOLIDAY (
+//		   DAY DATE NOT NULL, 
+//		   NAME VARCHAR(50) NOT NULL, 
+//	) """)
+//
+//    executeSql("""
+//		CREATE TABLE NO_APPOINTMENT (
+//    		USER_NAME VARCHAR(50), 
+//			START_DATE DATE NOT NULL, 
+//			END_DATE DATE NOT NULL, 
+//    		REASON VARCHAR(100) )""")
 
     // INSERTS
 
@@ -97,15 +104,25 @@ object H2Spikes extends App {
       .format(worklog.user.name, toS(worklog.date), worklog.worked)
 
     executeBatchSql(logsSql)
-    
+
     println("--------- Inserting Holidays")
-    
-    val logsHol = for (worklog <- Environment1.allHolidays)
-    	yield """INSERT INTO HOLIDAY (name, day)
+
+    val logsHol = for (holiday <- Environment1.allHolidays)
+      yield """INSERT INTO HOLIDAY (name, day)
     	VALUES ('%s', '%s')"""
-    	.format(worklog.name.replaceAll("'", ""), toS(worklog.when))
-    	
-    	executeBatchSql(logsHol)
+      .format(holiday.name.replaceAll("'", ""), toS(holiday.when))
+
+    executeBatchSql(logsHol)
+
+    println("--------- Inserting Vacations")
+
+    val logsVac = for (vacation <- Environment1.allVacations)
+      yield """INSERT INTO no_appointment
+    		(user_name, start_date, end_date, reason)
+    		VALUES ('%s', '%s', '%s', '%s')"""
+      .format(vacation.user.name, toS(vacation.startDate), toS(vacation.endDate), vacation.reason)
+
+    executeBatchSql(logsVac)
 
   } finally {
     conn.close

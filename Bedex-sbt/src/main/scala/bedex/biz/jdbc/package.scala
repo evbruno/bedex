@@ -82,6 +82,25 @@ package object jdbc {
   lazy val defaultInsertHolidaySQL =
     """INSERT INTO HOLIDAY (name, day) VALUES (?, ?)"""
 
+  lazy val defaultSelectAllVacationsSQL =
+    """SELECT u.user_name u_user_name,
+    				u.team t_name,
+    				t.coach t_coach,
+    				t.manager t_manager,
+            		n.start_date, 
+            		n.end_date, 
+            		n.reason 
+  		FROM no_appointment n, USER_TEAM  u, TEAM t
+  		WHERE u.team = t.name AND n.user_name = u.user_name AND u.end_date IS NULL
+  		ORDER BY end_date DESC """
+
+  lazy val defaultInsertVacationSQL =
+    """INSERT INTO NO_APPOINTMENT (user_name, reason, start_date, end_date) 
+    	VALUES (?, ?, ?, ?)"""
+
+    
+  lazy val defaultDeleteVacationSQL =
+    """DELETE FROM no_appointment WHERE user_name = ? AND reason = ? AND start_date = ? AND end_date = ?"""
   // jdbc
 
   def query[T](sql: String)(functor: ResultSet => T)(implicit connection: Connection): List[T] = {
@@ -143,4 +162,7 @@ package object jdbc {
   def incarnateWorklog(rs: ResultSet) = Worklog(incarnateUser(rs), rs.getDate("worked_date"), rs.getFloat("worked_time"))
 
   def incarnateHoliday(rs: ResultSet) = Holiday(rs.getString("name"), rs.getDate("day"))
+
+  def incarnateVacation(rs: ResultSet) =
+    Vacation(incarnateUser(rs), rs.getString("reason"), rs.getDate("start_date"), rs.getDate("end_date"))
 }

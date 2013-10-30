@@ -46,14 +46,21 @@ object H2Repository extends Repository {
     rs.setDate(2, new java.sql.Date(hol.when.getTime))
   }
 
-  def delete(hol: Holiday) = executeUpdate(defaultDeleteHolidaySQL) (holidayStmt(hol, _))
+  def delete(hol: Holiday) = executeUpdate(defaultDeleteHolidaySQL)(holidayStmt(hol, _))
 
   def insert(hol: Holiday) = executeUpdate(defaultInsertHolidaySQL)(holidayStmt(hol, _))
 
-  def allVacations: List[Vacation] = ???
+  def allVacations: List[Vacation] = query(defaultSelectAllVacationsSQL)(incarnateVacation)
 
-  def insert(vacation: Vacation) = ???
+  private def vacationStmt(vac: Vacation, rs: PreparedStatement) {
+    rs.setString(1, vac.user.name)
+    rs.setString(2, vac.reason)
+    rs.setDate(3, new java.sql.Date(vac.startDate.getTime))
+    rs.setDate(4, new java.sql.Date(vac.endDate.getTime))
+  }
 
-  def delete(vacation: Vacation) = ???
+  def insert(vacation: Vacation) = executeUpdate(defaultInsertVacationSQL)(vacationStmt(vacation, _))
+
+  def delete(vacation: Vacation) = executeUpdate(defaultDeleteVacationSQL)(vacationStmt(vacation, _))
 
 }
