@@ -13,8 +13,9 @@ object H2RepositorySpikes extends App {
   //  println("Users: \n" + allUsers.mkString("\n\t"))
   //  println("Logs: \n" + allMissAppointments.mkString("\n\t"))
 
-  H2Repository.connectTo("jdbc:h2:~/test_env")
-
+  // H2Repository.connectTo("jdbc:h2:~/test_env")
+  val repo = new H2Repository("jdbc:h2:~/test_env")
+  
   //  val miss0 = allMissAppointments(0)
   //  println("Miss0:" + miss0)
   //  miss0.reason.set("New reason int " + new Date)
@@ -47,20 +48,20 @@ object H2RepositorySpikes extends App {
 //  println("Deleting " + vac)
 //  delete(vac)
 //  
-  println(allVacations.mkString("\n\t"))
+  println(repo.allVacations.mkString("\n\t"))
   
-  val u = allUsers.find(_.name == "willie.clumpsy").get
-  val today = new java.util.Date
-  val tomorrow = new java.util.Date(today.getTime + 24 * 60 * 60 * 1000)
-  val vac = Vacation(u, "got lost", today, tomorrow)
-
-  println 
-  println("Inserting " + vac)
-  insert(vac)
-  println 
-
-  println(allVacations.mkString("\n\t"))
+//  val u = repo.allUsers.find(_.name == "willie.clumpsy").get
+//  val today = new java.util.Date
+//  val tomorrow = new java.util.Date(today.getTime + 24 * 60 * 60 * 1000)
+//  val vac = Vacation(u, "got lost", today, tomorrow)
+//
+//  println 
+//  println("Inserting " + vac)
+//  repo.insert(vac)
+//  println 
+//
+//  println(repo.allVacations.mkString("\n\t"))
   
-  shutdown
+  repo.shutdown
 
 }

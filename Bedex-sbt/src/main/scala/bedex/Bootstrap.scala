@@ -105,8 +105,9 @@ class Bootstrap private (params: Parameters) extends ShutdownAgent {
 
   private def h2OrCry(url: String, user: String, passwd: String) {
     logger.info("Connecting to H2 at url={}, user={}", Seq(url, user): _*)
-    H2Repository.connectTo(url, user, passwd)
-    Domain.repository = H2Repository
+    //H2Repository.connectTo(url, user, passwd)
+    //Domain.repository = H2Repository
+    Domain.repository = new H2Repository(url, user, passwd)
   }
 
   private def thinOracleOrCry(url: String, user: String, passwd: String) {
