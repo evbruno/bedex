@@ -42,9 +42,9 @@ object Environment1 extends Logger {
 
   // private fields
 
-  private val holidayBuffer: Buffer[Holiday] = holidays.toBuffer
+  private lazy val holidayBuffer: Buffer[Holiday] = holidays.toBuffer
 
-  private val vacationBuffer: Buffer[Vacation] = vacations.toBuffer
+  private lazy val vacationBuffer: Buffer[Vacation] = vacations.toBuffer
 
   // helpers
 

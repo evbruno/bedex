@@ -14,39 +14,28 @@ import scalafx.scene.layout.HBox
 import scalafx.scene.layout.VBox
 import scalafx.scene.control.ScrollPane
 import java.util.ResourceBundle
+import bedex.Bootstrap
+import javafx.event.EventHandler
+import javafx.stage.WindowEvent
 
 object BedexMainApp extends JFXApp {
+
+  val bootstrap = Bootstrap(parameters)
 
   stage = new PrimaryStage() {
     title = "Bedex Main"
     scene = new Scene {
       content = loadResource("Main")
     }
+    onCloseRequest = new EventHandler[WindowEvent]() {
+      override def handle(ev: WindowEvent) = {
+        bootstrap.shutdown
+      }
+    }
   }
+  
+  stage.x = 75
+  stage.y = 75
+  stage.show
 
 }
-//
-//  private def tab(title: String, contet: Node): Tab = {
-//    val sp = new ScrollPane
-//    sp.fitToHeight = true
-//    sp.fitToWidth = true
-//    sp.content = contet
-//    
-//    val t = new Tab
-//    t.text = title
-//    t.content = sp
-//    t.closable = false
-//    t
-//  }
-//
-//  private lazy val tabPane = {
-//    val tp = new TabPane
-//    tp += tab("Hi there", new Button("Hi there"))
-//    tp += tab("HElloWW", new Button("HElloWW there"))
-//    tp += tab("Labéuuu", longggg)
-//    tp.minHeight = 500
-//    tp.minWidth = 500
-//    tp
-//  }
-//
-//}
