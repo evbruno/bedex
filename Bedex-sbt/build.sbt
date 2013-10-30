@@ -17,6 +17,8 @@ libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.5"
 
 libraryDependencies +=  "org.scala-lang" % "scala-actors" % "2.10.2"
 
+libraryDependencies += "org.prevayler" % "prevayler-factory" % "2.6"
+
 // local resources (used for production only)
 
 resolvers += "My Repo" at "http://repo:8080/archiva/repository/internal"
