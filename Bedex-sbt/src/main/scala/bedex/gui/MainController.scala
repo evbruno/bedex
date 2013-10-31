@@ -24,21 +24,11 @@ class MainController extends Initializable {
   @FXML
   private var preNotificationTab: Tab = _
 
-  @FXML
-  private var statusBarBox: HBox = _
-
   def initialize(url: URL, rb: java.util.ResourceBundle) {
     missAppointmentTab.setContent(new MainView().root)
     holidayTab.setContent(tabContent("Holiday"))
     vacationTab.setContent(tabContent("Vacation"))
     //preNotificationTab.setContent(tabContent("PreNotification"))
-
-    addStatus("Loaded")
-  }
-
-  private def addStatus(msg: String) {
-    val label = new Label(msg)
-    statusBarBox.getChildren.add(label)
   }
 
   private def tabContent(resourceName: String): Node = {

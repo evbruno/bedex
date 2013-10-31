@@ -4,25 +4,17 @@ import java.sql._
 import bedex.biz._
 
 // FIXME current database impl. does not contain any pks
-object OracleRepository extends Repository {
+class OracleRepository(val url: String,
+  private val user: String,
+  private val passwd: String) extends Repository with JDBCCommonRepo {
 
-  implicit private var conn: Connection = _
-  private var url: String = _
+  Class.forName("oracle.jdbc.driver.OracleDriver")
 
-  def connectTo(url: String, user: String, passwd: String) = {
-    Class.forName("oracle.jdbc.driver.OracleDriver")
-    conn = DriverManager.getConnection(url, user, passwd)
-    conn.setAutoCommit(false)
-
-    this.url = url
-  }
-
-  def allTeams: List[Team] = query(defaultSelectTeamSQL)(incarnateTeam)
-
-  def allUsers: List[User] = query(defaultSelectUserSQL)(incarnateUser)
+  implicit val connection = DriverManager.getConnection(url, user, passwd)
+  connection.setAutoCommit(false)
 
   // AND m.start_date > SYSDATE - ???
-  def allMissAppointments: List[MissAppointment] = {
+  override def allMissAppointments: List[MissAppointment] = {
     val sql =
       """SELECT m.start_date l_start_date,
     				m.end_date l_end_date,
@@ -44,37 +36,9 @@ object OracleRepository extends Repository {
     query(sql)(incarnateMissAppointment)
   }
 
-  def lastWorklogFrom(user: User) = defaultLastWorklogFrom(user)
-
-  override def update(miss: MissAppointment): Unit = {
-    val sql = """UPDATE LOGMISSAPPOINTMENT l
-			SET l.reason = ?
-			WHERE
-			  l.type_log = ?
-			  AND l.level_log = ?
-			  AND l.end_date = ?
-			  AND l.user_name = ?"""
-
-    executeUpdate(sql) { fulFillStatement(_, miss) }
-  }
-
-  def shutdown() = {
+  override def shutdown() = {
     logger.info("Desconecting from {}", url)
-    conn.close
+    connection.close
   }
-
-  def allHolidays: List[Holiday] = ???
-
-  def update(hol: Holiday) = ???
-
-  def insert(hol: Holiday) = ???
-
-  def delete(hol: Holiday) = ???
-
-  def allVacations: List[Vacation] = ???
-
-  def insert(vacation: Vacation) = ???
-
-  def delete(vacation: Vacation) = ???
 
 }

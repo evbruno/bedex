@@ -112,8 +112,8 @@ class Bootstrap private (params: Parameters) extends ShutdownAgent {
 
   private def thinOracleOrCry(url: String, user: String, passwd: String) {
     logger.info("Connecting to Oracle at url={}, user={}", Seq(url, user): _*)
-    OracleRepository.connectTo(url, user, passwd)
-    Domain.repository = OracleRepository
+//    OracleRepository.connectTo(url, user, passwd)
+    Domain.repository = new OracleRepository(url, user, passwd)
   }
 
   private def inMemory() {
