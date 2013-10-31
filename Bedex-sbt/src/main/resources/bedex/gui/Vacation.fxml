@@ -37,17 +37,17 @@
     <Separator layoutX="14.0" layoutY="115.0" prefWidth="712.0" />
     <TableView fx:id="vacationsTable" layoutX="14.0" layoutY="126.0" prefHeight="329.0001220703125" prefWidth="712.0">
       <columns>
-        <TableColumn prefWidth="75.0" text="%core.username.text">
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="%core.username.text">
           <cellValueFactory>
             <PropertyValueFactory property="userName" />
           </cellValueFactory>
         </TableColumn>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="129.0" text="%vacation.gui.startDate">
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" resizable="false" text="%vacation.gui.startDate">
           <cellValueFactory>
             <PropertyValueFactory property="startDate" />
           </cellValueFactory>
         </TableColumn>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="%vacation.gui.endDate">
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" resizable="false" text="%vacation.gui.endDate">
           <cellValueFactory>
             <PropertyValueFactory property="endDate" />
           </cellValueFactory>

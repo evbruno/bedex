@@ -51,7 +51,7 @@ object Environment1 extends Logger {
   private def linesFor(source: String): Array[Array[String]] = {
     val inputStream = getClass.getResourceAsStream("/" + source)
     val content = Source.fromInputStream(inputStream, "utf-8").mkString
-    for (line <- content.split("\n").drop(1)) yield line.split('|')
+    content.split("\n").drop(1).map(_.split('|'))
   }
 
   private lazy val teams: Array[Team] =

@@ -77,7 +77,7 @@ class VacationController extends Initializable with Logger {
     val user = userCombo.getSelectionModel.getSelectedItem
     val reason = reasonText.getText
     val startDate = inputDateFormat.parse(startDateText.getText)
-    val endDate = inputDateFormat.parse(startDateText.getText)
+    val endDate = inputDateFormat.parse(endDateText.getText)
     val vacation = Vacation(user, reason, startDate, endDate)
 
     debug("Saving vacation = {} ", vacation)
