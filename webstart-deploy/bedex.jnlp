@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="6.0+" xmlns:jfx="http://javafx.com" codebase="http://wsmga-dudu/bedex/" href="bedex.jnlp">
+    <information>
+        <title>Bedex</title>
+        <vendor>Dudu</vendor>
+        <homepage href="http://wsmga-dudu/bedex/" />
+	<icon href="bedex.png" />
+	<icon href="bedex.png" kind="splash" />
+        <description>Bedex - Worklog tracker</description>
+	<shortcut>
+		<desktop />
+	</shortcut>
+    </information>
+
+    <security>
+        <all-permissions/>
+    </security>
+
+    <resources>
+        <j2se version="1.7+" />
+        <jar href="bedex.jar" />
+		<jfx:javafx-runtime version="2.2+" />
+    </resources>
+
+
+
+    <application-desc main-class="bedex.gui.BedexMainApp" />
+
+</jnlp>

@@ -7,7 +7,7 @@ mainClass in assembly := Some("bedex.gui.BedexMainApp")
 
 name := "bedex"
 
-version := "0.2"
+version := "0.3-SNAPSHOT"
 
 scalaVersion := "2.10.2"
 
@@ -35,9 +35,9 @@ libraryDependencies += "com.h2database" % "h2" % "1.3.173"
 
 unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/jfxrt.jar"))
 
-//excludedJars in assembly <<= (fullClasspath in assembly) map { cp =>
-//    cp filter {_.data.getName == "jfxrt.jar"}
-//}
+excludedJars in assembly <<= (fullClasspath in assembly) map { cp =>
+    cp filter {_.data.getName == "jfxrt.jar"}
+}
 
 fork in run := true
 
