@@ -47,7 +47,9 @@ If you choose to run from command line:
 
 ### TODO
 
-* vacations
+* vacations form
+* holidays form
+* user / team form
 * ~~show work log~~
   * caching
 * missappointment filters: 
@@ -55,6 +57,11 @@ If you choose to run from command line:
   * ~~by level~~
   * ~~by team~~
   * ~~by user name~~
+* missappointment form redesign
 * styling
 * miss appointments pre-notification
 * ProGuarding
+* ~~Webstart deployment~~
+* Splash screen
+* BG loading stuff (add anysome responsiveness)
+* 
