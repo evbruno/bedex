@@ -64,4 +64,4 @@ If you choose to run from command line:
 * ~~Webstart deployment~~
 * Splash screen
 * BG loading stuff (add anysome responsiveness)
-* 
+ 
