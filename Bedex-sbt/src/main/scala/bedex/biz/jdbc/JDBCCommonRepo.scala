@@ -70,7 +70,7 @@ trait JDBCCommonRepo extends Repository {
   lazy val defaultSelectUserSQL =
     """SELECT u.user_name u_user_name, u.team t_name, t.coach t_coach, t.manager t_manager
 			FROM USER_TEAM  u, TEAM t
-			WHERE u.team = t.name
+			WHERE u.team = t.name AND u.end_date IS NULL
     		ORDER BY u_user_name"""
 
   lazy val defaultSelectMissAppointmentsSQL =

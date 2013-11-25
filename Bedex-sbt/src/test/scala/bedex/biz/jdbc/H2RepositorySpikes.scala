@@ -1,13 +1,8 @@
 package bedex.biz.jdbc
 
-import java.util.Date
-import bedex.biz.env.Environment1
-import bedex.biz.Holiday
-import bedex.biz.Vacation
 
 object H2RepositorySpikes extends App {
 
-  import H2Repository._
 
   //  println("Teams: \n\t" + allTeams.mkString("\n\t"))
   //  println("Users: \n" + allUsers.mkString("\n\t"))
