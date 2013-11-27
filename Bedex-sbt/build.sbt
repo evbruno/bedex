@@ -44,3 +44,19 @@ fork in run := true
 autoScalaLibrary := false
 
 scalacOptions ++= Seq( "-unchecked", "-deprecation", "-feature" )
+
+// signing the webstart jar
+
+TaskKey[Unit]("sign_jar") := {
+	// FIXME hardcoded
+	val art = "bedex-assembly-0.3-SNAPSHOT"
+	val ksFile = System.getenv("KEYSTORE_FILE")
+	val ksPassword = System.getenv("KEYSTORE_PASSWORD")
+	val ksAlias = System.getenv("KEYSTORE_ALIAS")
+	val originalJar = "target/scala-2.10/" + art + ".jar"
+	val signedJar = "target/scala-2.10/" + art + "-signed.jar"
+	//val command = "jarsigner -keystore " + ksFile + " -signedjar " + signedJar + " " + originalJar + " " + ksAlias + ""
+	val command = "jarsigner -keystore %s -signedjar %s %s -storepass %s %s".format(ksFile, signedJar, originalJar, ksPassword, ksAlias)
+	println("Running: " + command)
+	command !
+}	

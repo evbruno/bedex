@@ -30,7 +30,7 @@ class OracleRepository(val url: String,
 				FROM LOGMISSAPPOINTMENT m, USER_TEAM  u, TEAM t
 				WHERE u.team = t.name
     				AND m.user_name = u.user_name
-    				AND m.start_date > (SYSDATE - 14)
+    				AND m.start_date > (SYSDATE - 30)
     				AND u.end_date IS NULL
 				ORDER BY m.start_date DESC"""
 
